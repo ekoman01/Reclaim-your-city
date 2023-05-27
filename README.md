@@ -7,6 +7,15 @@ view the wiki for all the links to our workplaces and communication platforms.
 
 ---
 
+## Start the project
+clien:
+- npm install in the client map
+- npm run dev to load the page
+
+backend:
+- ddev start
+- ddev launch
+
 ## **Reclaim Kortrijk**
 
 ![alt text](https://www.reisroutes.be/userfiles/fotos/mooiste-bezienswaardigheden-in-kortrijk_24610_xl.jpg)

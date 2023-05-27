@@ -1,0 +1,22 @@
+dateModified: 1685211727
+email:
+  fromEmail: tijmen.koetse@student.howest.be
+  fromName: reclaim-your-city
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5b8a19e1-3b40-499b-ba87-f5d0b0d07c9b: reclaim-your-city # reclaim-your-city
+    55a580ff-d96c-4da6-bac8-c2c1ea7363ef: reclaim-your-city # reclaim-your-city
+    d6923993-61e4-4da2-bf25-40a5787f0e54: Common # Common
+system:
+  edition: solo
+  live: true
+  name: reclaim-your-city
+  schemaVersion: 4.4.0.4
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
