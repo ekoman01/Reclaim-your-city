@@ -11,7 +11,7 @@ on:
 env:
   APP_PATH: ~/craft/reclaim-your-city
   WEB_PATH: ~/subsites/integration.devine-tijmenkoetse.be
-  SERVER_PATH: "server"
+  SERVER_PATH: "backend"
   CLIENT_PATH: "client"
 jobs:
   ftp-deploy:
