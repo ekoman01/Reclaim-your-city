@@ -1,15 +1,19 @@
-dateModified: 1685211727
+dateModified: 1686153063
 email:
   fromEmail: tijmen.koetse@student.howest.be
   fromName: reclaim-your-city
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    3e3711e0-4e47-470f-9d77-64d8222b8d29: walls # walls
     5b8a19e1-3b40-499b-ba87-f5d0b0d07c9b: reclaim-your-city # reclaim-your-city
     55a580ff-d96c-4da6-bac8-c2c1ea7363ef: reclaim-your-city # reclaim-your-city
+    aaad2059-c772-439f-af42-ac0940ff32f1: Default # Default
+    d343b158-3bb7-4e56-a85f-40a6de74370e: 'Public Schema' # Public Schema
     d6923993-61e4-4da2-bf25-40a5787f0e54: Common # Common
+    ea6a3177-c866-446d-8a37-b0db864c22fb: placeWall # placeWall
 system:
-  edition: solo
+  edition: pro
   live: true
   name: reclaim-your-city
   schemaVersion: 4.4.0.4

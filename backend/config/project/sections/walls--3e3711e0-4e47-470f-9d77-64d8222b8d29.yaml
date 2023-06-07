@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: walls
+name: walls
+propagationMethod: all
+siteSettings:
+  5b8a19e1-3b40-499b-ba87-f5d0b0d07c9b: # reclaim-your-city
+    enabledByDefault: true
+    hasUrls: true
+    template: walls/_entry
+    uriFormat: 'walls/{slug}'
+type: channel
