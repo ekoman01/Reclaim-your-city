@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The wall view</title>
+</head>
+<body>
+  <div id="app">
+    <div id="not-supported">
+      Web Serial is not supported in this browser.
+    </div>
+    <div id="supported">
+      <div id="not-connected">
+        <div>Not Connected</div>
+        <button id="connectButton">Connect</button>
+      </div>
+      <div id="connected">
+        Connected
+      </div>
+      <div>Pressed: <span id="press"></span></div>
+    </div>
+  </div>
+  <script type="module">
+    // app state
+    const hasWebSerial = "serial" in navigator;
+    let isConnected = false;
+
+    const $notSupported = document.getElementById("not-supported");
+    const $supported = document.getElementById("supported");
+    const $notConnected = document.getElementById("not-connected");
+    const $connected = document.getElementById("connected");
+
+    const $connectButton = document.getElementById("connectButton");
+
+    const init = async () => {
+      displaySupportedState();
+      if (!hasWebSerial) return;
+      displayConnectionState();
+
+      navigator.serial.addEventListener("connect", (e) => {
+        console.log("connect");
+        console.log(e.target);
+        const port = e.target;
+        const info = port.getInfo();
+        console.log('connect', port, info);
+        if (!isConnected) {
+          connect(port);
+        }
+      });
+
+      navigator.serial.addEventListener("disconnect", (e) => {
+        console.log("disconnect");
+        console.log(e.target);
+      });
+
+      const ports = await navigator.serial.getPorts()
+      console.log(ports);
+
+      $connectButton.addEventListener("click", handleClickConnect);
+
+      if (ports.length > 0) {
+        connect(ports[0]);
+        if (ports.length > 1) {
+          console.warn("More than one port detected. Only the first port will be used.");
+        }
+      }
+    };
+
+    const handleClickConnect = async () => {
+      const port = await navigator.serial.requestPort();
+      console.log(port);
+      const info = await port.getInfo();
+      console.log(info);
+      await connect(port);
+    }
+
+    const connect = async (port) => {
+      isConnected = true;
+      displayConnectionState();
+      await port.open({ baudRate: 9600 });
+
+      const textEncoder = new TextEncoderStream();
+      const writableStreamClosed = textEncoder.readable.pipeTo(port.writable);
+      const writer = textEncoder.writable.getWriter();
+
+      setInterval( async () => {
+        if (!isConnected) {
+          return;
+        }
+        await writer.write(JSON.stringify({
+          //closewall : openorclose,
+        }));
+        await writer.write('\n');
+      }, 100);
+
+      while (port.readable) {
+        const decoder = new TextDecoderStream();
+        const readableStreamClosed = port.readable.pipeTo(decoder.writable);
+        const inputStream = decoder.readable.pipeThrough(lineBreakTransformer);
+        const reader = inputStream.getReader();
+
+        try {
+          while (true) {
+            const { value, done } = await reader.read();
+            if (done) {
+              // |reader| has been canceled.
+              break;
+            }
+            // Do something with |value|...
+            try {
+              const json = JSON.parse(value);
+              // console.log(json);
+              document.getElementById("press").innerHTML = json.data[0];
+            } catch (error) {
+              //console.log(error);
+            }
+          }
+        } catch (error) {
+          // Handle |error|...
+        } finally {
+          reader.releaseLock();
+        }
+      }
+
+      port.addEventListener("disconnect", () => {
+        console.log("Disconnected");
+        isConnected = false;
+        displayConnectionState();
+      });
+    }
+
+    // for the joystick
+    const lineBreakTransformer = new TransformStream({
+      transform(chunk, controller) {
+        const text = chunk;
+        const lines = text.split("\n");
+        lines[0] = (this.remainder || "") + lines[0];
+        this.remainder = lines.pop();
+        lines.forEach((line) => controller.enqueue(line));
+      },
+      flush(controller) {
+        if (this.remainder) {
+          controller.enqueue(this.remainder);
+        }
+      },
+    });
+
+    const displaySupportedState = () => {
+      if (hasWebSerial) {
+        $notSupported.style.display = "none";
+        $supported.style.display = "block";
+      } else {
+        $notSupported.style.display = "block";
+        $supported.style.display = "none";
+      }
+    }
+
+    const displayConnectionState = () => {
+      if (isConnected) {
+        $notConnected.style.display = "none";
+        $connected.style.display = "block";
+      } else {
+        $notConnected.style.display = "block";
+        $connected.style.display = "none";
+      }
+    }
+
+    init();
+
+  </script>
+</body>
+</html>
