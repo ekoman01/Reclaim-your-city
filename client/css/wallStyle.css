@@ -8,6 +8,10 @@ html {
     background-color: #EBB656;
 }
 
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
 .scene_one {
     display: none;
 }
@@ -15,4 +19,8 @@ html {
 .scene_one > img {
     width: 100%;
     height: 100%;
+}
+
+.scene_two {
+    display: none;
 }

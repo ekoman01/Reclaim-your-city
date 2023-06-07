@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/wallStyle.css">
+  <link rel="stylesheet" href="../css/wallStyle.css">
   <title>The wall view</title>
 </head>
 <body>
@@ -23,8 +23,12 @@
     </div>
   </div>
   <div class="scene_one">
-    <img src="./assets/animations/arrow.gif" alt="">
+    <img src="../assets/animations/arrow.gif" alt="">
   </div>
+  <div class="scene_two">
+    
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script type="module">
     // app state
     const hasWebSerial = "serial" in navigator;
@@ -116,6 +120,9 @@
               const json = JSON.parse(value);
               // console.log(json);
               document.getElementById("press").innerHTML = json.data[0];
+              if (json.data[0] == 1) {
+                transition("scene_one", "scene_two");
+              }
             } catch (error) {
               //console.log(error);
             }
@@ -172,6 +179,13 @@
         $notConnected.style.display = "block";
         $connected.style.display = "none";
       }
+    }
+
+    const transition = (current, next) => {
+      gsap.to("." + current, {y: -1920, duration: 2});
+
+      document.querySelector("." + current).style.display = "none";
+      document.querySelector("." + next).style.display = "block";
     }
 
     init();
