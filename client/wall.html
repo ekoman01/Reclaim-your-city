@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/wallStyle.css">
   <title>The wall view</title>
 </head>
 <body>
@@ -20,6 +21,9 @@
       </div>
       <div>Pressed: <span id="press"></span></div>
     </div>
+  </div>
+  <div class="scene_one">
+    <img src="./assets/animations/arrow.gif" alt="">
   </div>
   <script type="module">
     // app state
@@ -160,6 +164,10 @@
       if (isConnected) {
         $notConnected.style.display = "none";
         $connected.style.display = "block";
+        setTimeout(() => {
+          document.getElementById("app").style.display = "none";
+          document.querySelector(".scene_one").style.display = "block";
+        }, 5000);
       } else {
         $notConnected.style.display = "block";
         $connected.style.display = "none";
