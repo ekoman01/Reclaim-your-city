@@ -1,0 +1,52 @@
+header {
+  padding: 1em 0 0 0;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_object {
+}
+
+.header_back {
+  position: absolute;
+  z-index: -1;
+}
+
+.what_is_intro {
+    margin: 3em 0 0 0;
+    height: 100vh;
+    background-color: #46725B;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3em;
+}
+
+.what_is_intro_left {
+    background-color: #ECEDF2;
+}
+
+.what_is_intro_left > h2 {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5em;
+}
+
+.what_is_intro_right {
+    padding: 2em 3em 0 0;
+}
+
+.what_is_intro_right > p {
+    color: #ECEDF2;
+}
+
+.what_is_intro_right_quote {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3em;
+}
