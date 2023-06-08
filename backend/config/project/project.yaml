@@ -1,4 +1,4 @@
-dateModified: 1686153063
+dateModified: 1686212810
 email:
   fromEmail: tijmen.koetse@student.howest.be
   fromName: reclaim-your-city
@@ -12,6 +12,11 @@ meta:
     d343b158-3bb7-4e56-a85f-40a6de74370e: 'Public Schema' # Public Schema
     d6923993-61e4-4da2-bf25-40a5787f0e54: Common # Common
     ea6a3177-c866-446d-8a37-b0db864c22fb: placeWall # placeWall
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true

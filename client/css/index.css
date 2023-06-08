@@ -7,9 +7,6 @@ header {
   justify-content: center;
 }
 
-.header_object {
-}
-
 .header_back {
   position: absolute;
   z-index: -1;
@@ -33,7 +30,8 @@ header {
     font-family: greycliff-cf, sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 5em;
+    font-size: 4em;
+    padding-left: 0.5em;
 }
 
 .what_is_intro_right {
@@ -46,7 +44,126 @@ header {
 
 .what_is_intro_right_quote {
     font-family: greycliff-cf, sans-serif;
-    font-style: normal;
+    font-style: oblique;
     font-weight: 900;
     font-size: 3em;
 }
+
+.what_is_list {
+    height: 80vh;
+    background-color: #46725B;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3em;
+    padding: 0 3em 0 6em;
+}
+
+.what_is_list_left {
+    color: #ECEDF2;
+}
+
+.what_is_list_left > p {
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    display: inline-block;
+    background-color: #EBB656;
+    padding: 0 3em 0 0.5em;
+}
+
+.what_is_list_left > ul {
+    list-style-type: none;
+}
+
+.bulletpoint {
+    margin: 0 1em 0 0;
+}
+
+.what_is_list_left > ul > hr:first-of-type {
+    margin: 2em 0 0 0;
+}
+
+.what_is_list_left > ul > li {
+    color: #ECEDF2;
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 700;
+    font-size: 4.5em;
+}
+
+.what_is_list_right {
+    justify-self: center;
+}
+
+.middle_deco {
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+}
+
+.middle_deco_text {
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.middle_deco_star {
+    margin: 1em 10em 0 0;
+}
+
+.for_who {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 3em 0 6em;
+}
+
+.for_who_left {
+    justify-self: center;
+}
+
+.for_who_left > h2 {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5em;
+    line-height: 1em;
+}
+
+.for_who_right {
+    justify-self: end;
+    margin: 0 10em 0 10em;
+}
+
+.for_who_right > div {
+    margin: 0 0 4em 0;
+}
+
+.for_who_right > div > img {
+    width: 100%;
+}
+
+.for_who_right > div > h3, p, a {
+    font-family: articulat-cf, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 0 0 1em 0;
+}
+
+.for_who_right > div > h3 {
+    display: inline-block;
+    background-color: #EBB656;
+    padding: 0 3em 0 0;
+    margin: 0.5em 0 0 0;
+    line-height: 1em;
+}
+
+.for_who_right > div > p {
+    line-height: 1.2em;
+    margin: 0.5em 0 0 0;
+}
+
+.for_who_right > div > a {
+    color:#45715A;
+}
+
