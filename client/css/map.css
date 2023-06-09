@@ -1,0 +1,45 @@
+.map {
+    background-color: #46725B;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 0 0;
+}
+
+.map > img {
+    justify-self: center;
+    height: 90%;
+    width: 90%;
+}
+
+.where {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 1fr;
+    height: 40vh;
+    background-color: #46725B;
+    gap: 2em;
+}
+
+.where_left {
+    margin: 0 0 0 5em;
+}
+
+.where_left > h1 {
+    background-color: #EBB656;
+    font-family: greycliff-cf, sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+    font-size: 4em;
+    padding: 0 0 0.2em 0.2em;
+    line-height: 1em;
+}
+
+.where_right {
+    margin: 0 5em 0 5em;
+}
+
+.where_right > p {
+    color: #ECEDF2;
+    font-size: 1.5em;
+}
