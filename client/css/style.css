@@ -31,3 +31,62 @@ nav {
 .logo {
   height: 100%;
 }
+
+footer {
+    background-color: #001F0F;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 2em 0 0 0;
+}
+
+.footer_left {
+    margin: 0 10em 0 5em;
+}
+
+.footer_left > img {
+    margin: 0 0 6em 0;
+}
+
+.footer_left > p {
+    font-size: 3.2em;
+    line-height: 1.2em;
+}
+
+.footer_left > hr {
+    margin: 0 0 5em 0;
+}
+
+.footer_left_socials > img {
+    margin: 0 2em 0 0;
+}
+
+.footer_right {
+    align-self: center;
+    width: 90%;
+}
+
+.footer_right > ul {
+    columns: 2;
+    column-gap: 1em;
+}
+
+.footer_white {
+    color: #ECEDF2;
+    list-style: none;
+}
+
+.footer_grey {
+    color: #63967B;
+    list-style: none;
+    margin: 0 0 0.5em 0;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.footer_list_title {
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0 0 1em 0;
+}
