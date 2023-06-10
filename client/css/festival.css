@@ -59,8 +59,20 @@ header > div > p {
     font-size: 3em;
 }
 
+.intro_left > ul > li:hover {
+    text-decoration: underline;
+}
+
 .intro_right {
-    background-color: #46725B;
+    background-color: #001F0F;
+    display: flex;
+}
+
+.intro_right > p {
+    color: #ECEDF2;
+    font-size: 1.5em;
+    justify-content: center;
+    margin: 3em 5em 0 5em;
 }
 
 .what {
@@ -127,7 +139,7 @@ header > div > p {
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 1fr;
     height: 80vh;
-    background-color: #46725B;
+    background-color: #001F0F;
     padding: 4em 4em 0 4em;
 }
 
@@ -142,7 +154,7 @@ header > div > p {
     font-family: greycliff-cf, sans-serif;
     font-weight: 700;
     font-size: 3em;
-    color: #46725B;
+    color: #001F0F;
     padding: 0 0.8em 0 0;
     vertical-align:middle; 
     display: inline-block;
@@ -161,14 +173,14 @@ header > div > p {
 }
 
 .deco {
-    margin: -3em 0 0 0;
+    margin: -3em 0 5em 0;
 }
 
 .deco > p {
     font-family: greycliff-cf, sans-serif;
     font-weight: 900;
     font-size: 15em;
-    color: #46725B;
+    color: #001F0F;
     line-height: 0.8em;
 }
 
@@ -180,7 +192,62 @@ header > div > p {
 }
 
 .eatndrink {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 100vh;
+    margin: 0 3em 5em 3em;
+}
+
+.eatndrink_top > div > h3 {
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    display: inline-block;
+}
+
+.eatndrink_top > div > img {
+    display: inline-block;
+    padding: 0 0 0 1em;
+}
+
+.eatndrink_top > p {
+    font-size: 1.5em;
+    width: 35%;
+}
+
+.eatndrink_bottom {
+    display: flex;
+    justify-content: end;
+    height: min-content;
+}
+
+.eatndrink_bottom > div {
+    margin: 0 2em 0 0;
+    width: min-content;
+}
+
+.eatndrink_bottom > div > p {
+    font-size: 1.5em;
+    margin: 0.5em 0 0 0;
+}
+
+.eatndrink_bottom > div > p:first-of-type:not(:last-of-type) {
+    background-color: #EBB656;
+    width: max-content;
+    padding: 0 2em 0 0.2em;
+}
+
+.eatndrink_bottom_viewmore {
+    align-self: center;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    padding: 0 0 0 1em;
+}
+
+.eatndrink_bottom_viewmore > p {
+    font-weight: 900;
+    text-decoration: underline;
 }
 
 .wall {
