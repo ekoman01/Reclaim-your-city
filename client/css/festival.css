@@ -1,0 +1,76 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 80vh;
+    margin: 0 0 5em 0;
+}
+
+header > img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+header > div {
+    align-self: end;
+    width: 40%;
+    background-color: #ECEDF2;
+    padding: 1em 1em 0 2em;
+    margin: 0 0 0 10em;
+}
+
+header > div > h1 {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 5em;
+}
+
+header > div > p {
+    font-size: 1.5em;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    height: 50vh;
+}
+
+.intro_left > p {
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    display: inline-block;
+    background-color: #EBB656;
+    padding: 0 3em 0 0.5em;
+    margin: 0 0 2em 2em;
+}
+
+.intro_left > ul {
+    list-style: none;
+}
+
+.intro_left > ul > li {
+    margin: 0 0 0 2em;
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.intro_right {
+    background-color: #46725B;
+}
+
+.what {
+    height: 100vh;
+    margin: 10em 0 0 0;
+}
+
+.what > h2 {
+    font-family: greycliff-cf, sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    text-align: center;
+}
