@@ -7,11 +7,11 @@
   font-style: normal;
   font-weight: 600;
 
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 html {
-  background-color: #ECEDF2;
+  background-color: #ecedf2;
 }
 
 nav {
@@ -32,61 +32,114 @@ nav {
   height: 100%;
 }
 
+.mobile_nav {
+  display: none;
+}
+
 footer {
-    background-color: #001F0F;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 2em 0 0 0;
+  background-color: #001f0f;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2em 0 0 0;
 }
 
 .footer_left {
-    margin: 0 10em 0 5em;
+  margin: 0 10em 0 5em;
 }
 
 .footer_left > img {
-    margin: 0 0 6em 0;
+  margin: 0 0 6em 0;
 }
 
 .footer_left > p {
-    font-size: 3.2em;
-    line-height: 1.2em;
+  font-size: 3.2em;
+  line-height: 1.2em;
 }
 
 .footer_left > hr {
-    margin: 0 0 5em 0;
+  margin: 0 0 5em 0;
 }
 
 .footer_left_socials > img {
-    margin: 0 2em 0 0;
+  margin: 0 2em 0 0;
 }
 
 .footer_right {
-    align-self: center;
-    width: 90%;
+  align-self: center;
+  width: 90%;
 }
 
 .footer_right > ul {
-    columns: 2;
-    column-gap: 1em;
+  columns: 2;
+  column-gap: 1em;
 }
 
 .footer_white {
-    color: #ECEDF2;
-    list-style: none;
+  color: #ecedf2;
+  list-style: none;
 }
 
 .footer_grey {
-    color: #63967B;
-    list-style: none;
-    margin: 0 0 0.5em 0;
-    font-weight: 200;
-    font-size: 0.8em;
+  color: #63967b;
+  list-style: none;
+  margin: 0 0 0.5em 0;
+  font-weight: 200;
+  font-size: 0.8em;
 }
 
 .footer_list_title {
-    font-weight: 500;
+  font-weight: 500;
+  font-size: 2em;
+  margin: 0 0 1em 0;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  footer {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 2em 0 0 0;
+  }
+
+  .footer_left {
+    order: 2;
+    margin: 0 1em 0 1em;
+  }
+
+  .footer_left > img {
+    margin: 0 0 3em 0;
+  }
+
+  .footer_left > p {
+    margin: 0 0 2em 0;
+    font-size: 3em;
+  }
+
+  .footer_left_socials {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5em 0;
+  }
+
+  .footer_left_socials > img {
+    margin: 0 2em 0 1em;
+  }
+
+  .footer_right {
+    order: 1;
+    margin: 0 1em 0 1em;
+    width: 100%;
+  }
+
+  .footer_right > ul {
+    columns: 1;
+    column-gap: 0;
+  }
+
+  .footer_list_title {
     font-size: 2em;
-    margin: 0 0 1em 0;
+  }
 }

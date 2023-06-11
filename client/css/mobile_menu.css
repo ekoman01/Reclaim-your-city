@@ -1,0 +1,47 @@
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: block;
+    position: absolute;
+    background-color: #ecedf2;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .mobile_nav {
+    padding: 1em 0 0 1em;
+  }
+
+  .mobile_nav_button {
+    float: right;
+    margin: 1em 1em 0 0;
+  }
+
+  .mobile_nav > div {
+    position: absolute;
+    right: 0px;
+    display: none;
+    align-items: center;
+    height: 90vh;
+    width: 80vw;
+    background-color: #ebb656;
+  }
+
+  .mobile_nav > div > ul {
+    list-style: none;
+    padding: 0 0 0 2em;
+  }
+
+  .mobile_nav > div > ul > li {
+    margin: 0 0 2em 0;
+    font-size: 2em;
+  }
+
+  .mobile_nav > div > ul > li > a {
+    text-decoration: none;
+    font-weight: 300;
+  }
+}

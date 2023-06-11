@@ -151,7 +151,15 @@ header {
     width: 100%;
 }
 
-.for_who_right > div > h3, p, a {
+.for_who_right > div > h3, p {
+    font-family: articulat-cf, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 0 0 0.1em 0;
+}
+
+.for_who_right > div > a {
     font-family: articulat-cf, sans-serif;
     font-style: normal;
     font-weight: 600;

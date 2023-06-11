@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/eqr8fmx.css">
     <link rel="stylesheet" href="https://use.typekit.net/eqr8fmx.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile_menu.css" />
+    <script type="module" src="../scripts/mobile_menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <title>Vite App</title>
   </head>
   <body>
@@ -21,6 +24,18 @@
       <a class="nav_item" href="./archive.html">Archive</a>
       <a class="nav_item" href="./festival.html">Festival</a>
     </nav>
+    <div class="mobile_nav">
+      <a href="../index.html"><img src="../assets/images/logo_nav.png" alt=""></a>
+      <img class="mobile_nav_button" src="../assets/images/menu.png" alt="">
+      <div class="mobile_nav_container">
+        <ul id="mobile_nav_menu">
+          <li><a href="./map.html">Map</a></li>
+          <li><a href="./agenda.html">Agenda</a></li>
+          <li><a href="./archive.html">Archive</a></li>
+          <li><a href="./festival.html">Festival</a></li>
+        </ul>
+      </div>
+    </div>
     <main>
       <article class="">
 

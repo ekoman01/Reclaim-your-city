@@ -1,45 +1,108 @@
 .map {
-    background-color: #46725B;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 1em 0 0 0;
+  background-color: #46725b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-.map > img {
-    justify-self: center;
-    height: 90%;
-    width: 90%;
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+.map_map {
+  height: 90%;
+  width: 95%;
+  margin: auto;
+}
+
+button {
+  color: red;
+  background-color: black;
+}
+
+.button-23 {
+  position: relative;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+.afbeelding {
+  background-image: "https://www.designcities.net/wp-content/uploads/2018/04/City-of-Kortrijk-%C2%AEHenderyckx.jpg";
+  padding: 7% 0 0 20%;
 }
 
 .where {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    grid-template-rows: 1fr;
-    height: 40vh;
-    background-color: #46725B;
-    gap: 2em;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 1fr;
+  height: 30vh;
+  background-color: #46725b;
+  gap: 2em;
 }
 
 .where_left {
-    margin: 0 0 0 5em;
+  margin: 0 0 0 5em;
 }
 
 .where_left > h1 {
-    background-color: #EBB656;
-    font-family: greycliff-cf, sans-serif;
-    font-style: oblique;
-    font-weight: 900;
-    font-size: 4em;
-    padding: 0 0 0.2em 0.2em;
-    line-height: 1em;
+  color: #ebb656;
+  font-family: greycliff-cf, sans-serif;
+  font-style: oblique;
+  font-weight: 900;
+  font-size: 4em;
+  padding: 0 0 0.2em 0.2em;
+  line-height: 1em;
 }
 
 .where_right {
-    margin: 0 5em 0 5em;
+  margin: 0 5em 0 5em;
 }
 
 .where_right > p {
-    color: #ECEDF2;
+  color: #ecedf2;
+  font-size: 1.5em;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .map_map {
+    display: flex;
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .where {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    height: auto;
+    padding: 2em 0 0 0;
+  }
+
+  .where_left,
+  .where_right {
+    margin: 0;
+  }
+
+  .where_left > h1 {
+    font-size: 3em;
+  }
+
+  .where_right {
+    margin: 0 1em 0 1em;
+    padding: 0 0 10em 0;
+  }
+
+  .where_right > p {
     font-size: 1.5em;
+  }
 }
