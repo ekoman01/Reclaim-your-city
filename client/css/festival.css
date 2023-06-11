@@ -7,12 +7,12 @@ header {
 }
 
 header > img {
-    position: absolute;
-    z-index: -1;
+    grid-area: 1 / 1 / 2 / 2;
     width: 100%;
 }
 
 header > div {
+    grid-area: 1 / 1 / 2 / 2;
     align-self: end;
     width: 40%;
     background-color: #ECEDF2;

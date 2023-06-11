@@ -1,0 +1,145 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  margin: 0 0 5em 0;
+}
+
+header > img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+}
+
+header > div {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: end;
+  width: 40%;
+  background-color: #ecedf2;
+  padding: 1em 1em 0 2em;
+  margin: 0 0 10em 10em;
+}
+
+header > div > h1 {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5em;
+}
+
+header > div > p {
+  font-size: 1.5em;
+}
+
+.archive {
+  height: max-content;
+  margin: 1em 5em 1em 5em;
+}
+
+.archive > h2 {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3em;
+  margin: 0 0 1em 0;
+}
+
+.archive_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2em;
+}
+
+.archive_container > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.archive_container > div > p {
+  grid-area: 1 / 1 / 2 / 2;
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1em;
+  color: #ecedf2;
+}
+
+.archive_container > div > img {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: -1;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    margin: 0 0 5em 0;
+  }
+
+  header > img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1/2;
+    object-fit: cover;
+    object-position: top center;
+    height: 80%;
+  }
+
+  header > div {
+    align-self: start end;
+    width: 100%;
+    background-color: unset;
+    padding: 0 0 0 1em;
+    margin: 0 0 0 0;
+  }
+
+  header > div > h1 {
+    font-size: 3em;
+  }
+
+  header > div > p {
+    font-size: 1.5em;
+  }
+
+  .archive {
+    height: max-content;
+    margin: 1em 1em 1em 1em;
+  }
+
+  .archive > h2 {
+    font-size: 3em;
+    margin: 0 0 1em 0;
+  }
+
+  .archive_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+
+  .archive_container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .archive_container > div > p {
+    font-size: 2.5em;
+  }
+
+  .archive_container > div > img {
+    width: 100%;
+  }
+}
