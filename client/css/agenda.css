@@ -2,8 +2,8 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  height: 100vh;
-  margin: 0 0 0 0;
+  height: 100%;
+  margin: 0 0 10em 0;
 }
 
 header > img {
@@ -17,7 +17,7 @@ header > div {
   width: 40%;
   background-color: #ecedf2;
   padding: 1em 1em 0 2em;
-  margin: 0 0 10em 10em;
+  margin: 0 0 0 10em;
 }
 
 header > div > h1 {
@@ -32,12 +32,138 @@ header > div > p {
 }
 
 .timeline_container {
-    display: grid;
-    grid-template-columns: 0.4fr 1.6fr;
-    grid-template-rows: auto;
-    height: 100vh;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: auto;
+  height: 100%;
+  margin: 0 0 5em 0;
 }
 
 .timeline_container_left {
-    background-color: #001F0F;
+  background-color: #001f0f;
+}
+
+.timeline_container_left > div {
+  display: flex;
+  justify-content: end;
+  margin: 1em 1em 0 0;
+  height: 10em;
+}
+
+.timeline_container_left > div > h2 {
+  color: #ecedf2;
+  font-family: greycliff-cf, sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  justify-self: end;
+}
+
+.timeline_container_rigth > div {
+  display: flex;
+  justify-content: start;
+  margin: 1em 0 0 10em;
+  height: 10em;
+}
+
+.timeline_container_rigth > div:first-of-type > p {
+  font-size: 4em;
+  background-color: #ebb656;
+  font-weight: 900;
+  justify-self: end;
+  height: min-content;
+  padding: 0em 0.5em 0em 0.5em;
+}
+
+.timeline_container_rigth > div:not(:first-of-type) {
+  border: #001f0f solid 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 1em 1em;
+  width: 50%;
+}
+
+.timeline_container_rigth > div:not(:first-of-type) > p:first-of-type {
+  font-size: 2em;
+  font-weight: 900;
+  justify-self: end;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    margin: 0 0 5em 0;
+  }
+
+  header > img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1/2;
+    object-fit: cover;
+    object-position: top center;
+    height: 80%;
+  }
+
+  header > div {
+    align-self: start end;
+    width: 100%;
+    background-color: unset;
+    padding: 0 0 0 1em;
+    margin: 0 0 0 0;
+  }
+
+  header > div > h1 {
+    font-size: 3em;
+  }
+
+  header > div > p {
+    font-size: 1.5em;
+  }
+
+  .timeline_container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    height: 100%;
+    margin: 0 2em 5em 0;
+  }
+
+  .timeline_container_left > div {
+    display: flex;
+    justify-content: end;
+    margin: 1em 0.5em 0 1em;
+    height: 13em;
+  }
+
+  .timeline_container_left > div > h2 {
+    font-size: 2em;
+    justify-self: end;
+  }
+
+  .timeline_container_rigth > div {
+    display: flex;
+    justify-content: start;
+    margin: 1em 0 0 1em;
+    height: 13em;
+  }
+
+  .timeline_container_rigth > div:first-of-type > p {
+    font-size: 3em;
+  }
+
+  .timeline_container_rigth > div:not(:first-of-type) {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 1em 1em;
+    width: 100%;
+  }
+
+  .timeline_container_rigth > div:not(:first-of-type) > p:first-of-type {
+    font-size: 1.5em;
+    font-weight: 900;
+    justify-self: end;
+  }
 }

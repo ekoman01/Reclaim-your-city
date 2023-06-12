@@ -2,8 +2,8 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  height: 100vh;
-  margin: 0 0 0 0;
+  height: 100%;
+  margin: 0 0 5em 0;
 }
 
 header > img {
@@ -17,7 +17,7 @@ header > div {
   width: 40%;
   background-color: #ecedf2;
   padding: 1em 1em 0 2em;
-  margin: 0 0 10em 10em;
+  margin: 0 0 0 10em;
 }
 
 header > div > h1 {
@@ -76,6 +76,35 @@ header > div > p {
   z-index: -1;
 }
 
+/* category sub page */
+.locked {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  height: 100%;
+  margin: 10em 0;
+}
+
+.locked > hr {
+  width: 50%;
+  margin: 2em auto;
+}
+
+.locked > p:first-of-type {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.locked > p:last-of-type {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3em;
+}
+
 /* Media query for screens with a maximum width of 768px */
 @media screen and (max-width: 768px) {
   header {
@@ -96,7 +125,7 @@ header > div > p {
   }
 
   header > div {
-    align-self: start end;
+    align-self: end;
     width: 100%;
     background-color: unset;
     padding: 0 0 0 1em;
