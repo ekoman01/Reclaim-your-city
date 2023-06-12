@@ -48,6 +48,7 @@ header > div > p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 2em;
+  justify-items: center;
 }
 
 .archive_container > div {

@@ -1,0 +1,43 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  margin: 0 0 0 0;
+}
+
+header > img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+}
+
+header > div {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: end;
+  width: 40%;
+  background-color: #ecedf2;
+  padding: 1em 1em 0 2em;
+  margin: 0 0 10em 10em;
+}
+
+header > div > h1 {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5em;
+}
+
+header > div > p {
+  font-size: 1.5em;
+}
+
+.timeline_container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+.timeline_container_left {
+    background-color: #001F0F;
+}
