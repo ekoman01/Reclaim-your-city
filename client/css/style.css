@@ -12,6 +12,11 @@
 
 html {
   background-color: #ecedf2;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 nav {
@@ -72,6 +77,10 @@ footer {
   width: 90%;
 }
 
+.footer_right > ul > li > ul > li {
+  margin: 0 0 1em 0;
+}
+
 .footer_right > ul {
   columns: 2;
   column-gap: 1em;
@@ -79,20 +88,19 @@ footer {
 
 .footer_white {
   color: #ecedf2;
-  list-style: none;
+  text-decoration: none;
 }
 
 .footer_grey {
+  text-decoration: none;
   color: #63967b;
-  list-style: none;
-  margin: 0 0 0.5em 0;
   font-weight: 200;
-  font-size: 0.8em;
+  font-size: 1.5em;
 }
 
 .footer_list_title {
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0 0 1em 0;
 }
 
