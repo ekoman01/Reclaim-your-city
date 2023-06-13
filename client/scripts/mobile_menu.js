@@ -7,7 +7,7 @@ const init = () => {
             document.querySelector(".mobile_nav_container").style.display = "flex";
             gsap.to(".mobile_nav_button", { rotation: 180});
             document.querySelector(".mobile_nav_button").src = "../assets/images/cross.png";
-            document.querySelector("html").style.overflow = "hidden";
+            document.querySelector("html").style.overflowY = "hidden";
             checked = true;
         } else {
             gsap.to(".mobile_nav_container", { x: 1000});
@@ -15,9 +15,9 @@ const init = () => {
                 document.querySelector(".mobile_nav_container").style.display =
                 "none";
             }, 50);
-            gsap.to(".mobile_nav_button", { rotation: -180});
+            gsap.to(".mobile_nav_button", { rotation: -360});
             document.querySelector(".mobile_nav_button").src = "../assets/images/menu.png";
-            document.querySelector("html").style.overflow = "unset";
+            document.querySelector("html").style.overflowY = "unset";
             checked = false;
         }
             

@@ -5,19 +5,16 @@
 
   .mobile_nav {
     display: block;
-    position: absolute;
+    position: fixed;
     background-color: #ecedf2;
     width: 100vw;
     z-index: 1;
-  }
-
-  .mobile_nav {
     padding: 1em 0 0 1em;
   }
 
   .mobile_nav_button {
     float: right;
-    margin: 1em 1em 0 0;
+    margin: 0.5em 1em 0 0;
   }
 
   .mobile_nav > div {
