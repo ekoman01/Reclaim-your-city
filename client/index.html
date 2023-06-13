@@ -15,8 +15,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
+    <script type="module" src="./scripts/index.js"></script>
     <script type="module" src="./scripts/mobile_menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>	
     <title>Golden Voices - Home</title>
   </head>
   <body>
@@ -45,7 +47,7 @@
     </div>
     <header class="header_deco">
       <div class="header_deco_star">
-        <img src="./assets/images/gold_star.png" alt="">
+        <img class="starImage" src="./assets/images/gold_star.png" alt="">
       </div>
       <img class="header_deco_text" src="./assets/images/middledeco.png" alt="">
       <img class="header_deco_text_mobile" src="./assets/images/mobile/mobile_header.png" alt="">
@@ -63,7 +65,7 @@
       </article>
       <article class="what_is_list">
         <div class="what_is_list_left">
-          <p>So........</p>
+          <p class="whatIsListP">So........</p>
           <ul>
             <hr>
             <li>
@@ -85,7 +87,7 @@
           </ul>
         </div>
         <div class="what_is_list_right">
-          <img src="./assets/images/listdeco.png" alt="">
+          <img class="whatIsListImage" src="./assets/images/listdeco.png" alt="">
         </div>
       </article>
       <article class="middle">
@@ -98,7 +100,7 @@
       <article class="for_who" id="who">
         <div class="for_who_left">
           <h2>For who is this?</h2>
-          <img src="./assets/images/tygo.png" alt="">
+          <img class="forWhoImage" src="./assets/images/tygo.png" alt="">
         </div>
         <div class="for_who_right">
           <div class="for_who_right_you">
@@ -168,10 +170,10 @@
       </article>
       <article class="outro">
         <p>
-          SO WHAT ARE YOU <img src="./assets/images/you.png" alt=""> <br> 
+          SO WHAT ARE YOU <img class="finger" src="./assets/images/you.png" alt=""> <br> 
           WAITING FOR COME TO <br>
           OUR EXHIBITIONS AND OUR <br>
-          <span class="outro_underline">FESTIVAL</span> <img src="./assets/images/festival.png" alt=""> <br> 
+          <span class="outro_underline">FESTIVAL</span> <img class="festival" src="./assets/images/festival.png" alt=""> <br> 
           <span class="outro_date">FROM 1 - 7 JULI</span>
         </p>
       </article>
