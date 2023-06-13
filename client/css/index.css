@@ -280,6 +280,8 @@ p {
 }
 
 .outro {
+  display: grid;
+  justify-items: center;
   height: 100vh;
   margin: 5em 5em 0 5em;
 }
