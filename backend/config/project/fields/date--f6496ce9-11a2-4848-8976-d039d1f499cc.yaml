@@ -1,0 +1,19 @@
+columnSuffix: uexrsgxv
+contentColumnType: text
+fieldGroup: d6923993-61e4-4da2-bf25-40a5787f0e54 # Common
+handle: date
+instructions: null
+name: date
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

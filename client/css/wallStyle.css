@@ -5,7 +5,8 @@
 }
 
 html {
-    background-color: #EBB656;
+  background-color: #ebb656;
+  overflow-y: hidden;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -13,14 +14,108 @@ html {
 }
 
 .scene_one {
-    display: none;
+  display: none;
+  height: 125vh;
 }
 
 .scene_one > img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+.scene_one > .glow, img {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.scene_one > .glow {
+  align-self: end;
+  justify-self: center;
+  padding: 10em 0 0 0;
 }
 
 .scene_two {
-    display: none;
+  display: none;
+  width: auto;
+  grid-template-rows: 1fr 1fr;
+  margin: 5em 5em 0 5em;
+}
+
+.question_container {
+  height: 80vh;
+}
+
+.glow {
+  justify-self: center;
+  margin: 10em 0 0 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,      /* inner white */
+    inset 20px 0 80px rgb(255, 88, 88),   /* inner left magenta short */
+    inset -20px 0 80px rgb(255, 47, 47),  /* inner right cyan short */
+    inset 20px 0 300px rgb(255, 33, 33),  /* inner left magenta broad */
+    inset -20px 0 300px rgb(255, 47, 47), /* inner right cyan broad */
+    0 0 50px #cecece,            /* outer white */
+    -10px 0 80px rgb(255, 88, 88),        /* outer left magenta */
+    10px 0 80px #ff4949;         /* outer right cyan */
+}
+
+.scene_three {
+  display: none;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  margin: 5em 5em 0 5em;
+}
+
+.scene_three > p {
+  align-self: start;
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5em;
+  text-align: center;
+  color: #1e1e1e;
+  margin: 0 0 0.5em 0;
+}
+
+.scene_three > img {
+  align-self: end;
+  width: 50%;
+}
+
+.rotate {
+  transform: rotate(-4deg);
+}
+
+.question {
+  color: #ebb656;
+  background-color: #1e1e1e;
+  width: 100%;
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 7em;
+  text-transform: uppercase;
+  line-height: 2em;
+  padding: 0em 0.2em 0 0.2em;
+  display: inline;
+}
+
+.form_container {
+  margin: 15em 0 0 0;
+}
+
+form > div > label, input {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+form > div > input {
+  background-color: #ebb656;
+  border: none;
+  border-bottom: #1e1e1e 0.2em dotted;
 }

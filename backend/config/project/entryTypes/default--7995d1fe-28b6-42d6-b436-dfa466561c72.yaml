@@ -1,0 +1,79 @@
+fieldLayouts:
+  a40e44ba-845b-44e6-a9fc-be974faf963c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: question
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f780e17b-2006-4a4f-af97-43d25f7395eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ea6a3177-c866-446d-8a37-b0db864c22fb # placeWall
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0142dd3a-51f7-4648-b80f-e2bba89afe42
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f6496ce9-11a2-4848-8976-d039d1f499cc # date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66b671fc-5cb7-4d32-bcaa-3aa023c55864
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4d51cb32-cc67-459c-a166-186fe8cde59a # userAnswer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c245cc7-e566-46d3-95f0-4dc90c31602c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8b099c85-7b25-43b0-86aa-810ffb467418
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 366f6b25-9e94-49ed-84cc-d8e0868eb777 # answers
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,2 +1,18 @@
 isPublic: true
 name: 'Public Schema'
+scope:
+  - 'sites.5b8a19e1-3b40-499b-ba87-f5d0b0d07c9b:read' # reclaim-your-city
+  - 'sections.366f6b25-9e94-49ed-84cc-d8e0868eb777:read' # answers
+  - 'entrytypes.7995d1fe-28b6-42d6-b436-dfa466561c72:read' # Default
+  - 'sections.3e3711e0-4e47-470f-9d77-64d8222b8d29:read' # walls
+  - 'entrytypes.aaad2059-c772-439f-af42-ac0940ff32f1:read' # Default
+  - 'sections.366f6b25-9e94-49ed-84cc-d8e0868eb777:edit' # answers
+  - 'entrytypes.7995d1fe-28b6-42d6-b436-dfa466561c72:edit' # Default
+  - 'entrytypes.7995d1fe-28b6-42d6-b436-dfa466561c72:create' # Default
+  - 'entrytypes.7995d1fe-28b6-42d6-b436-dfa466561c72:save' # Default
+  - 'entrytypes.7995d1fe-28b6-42d6-b436-dfa466561c72:delete' # Default
+  - 'sections.3e3711e0-4e47-470f-9d77-64d8222b8d29:edit' # walls
+  - 'entrytypes.aaad2059-c772-439f-af42-ac0940ff32f1:edit' # Default
+  - 'entrytypes.aaad2059-c772-439f-af42-ac0940ff32f1:create' # Default
+  - 'entrytypes.aaad2059-c772-439f-af42-ac0940ff32f1:save' # Default
+  - 'entrytypes.aaad2059-c772-439f-af42-ac0940ff32f1:delete' # Default
