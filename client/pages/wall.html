@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/eqr8fmx.css" />
   <script type="module" src="../scripts/wall.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>	
   
   <title>The wall view</title>
 </head>
@@ -26,10 +27,6 @@
       <div>Pressed: <span class="press"></span></div>
     </div>
   </div>
-  <div class="scene_one">
-    <div class="glow"></div>
-    <img src="../assets/animations/arrow.gif" alt="">
-  </div>
   <div class="scene_two">
     <div class="question_container">
       <div class="rotate">
@@ -39,15 +36,25 @@
         <form class="form">
           <div>
             <label>Antwoord: </label>
-            <input class="answer" type="text" required>
+            <p class="warning"></p>
+            <input class="answer" type="text">
           </div>
         </form>
       </div>
     </div>
     <div class="glow"></div>
   </div>
+  <div class="scene_one">
+    <div class="glow"></div>
+    <img src="../assets/animations/arrow.gif" alt="">
+  </div>
+  
   <div class="scene_three">
-    <p>Dankjewel voor je input!</p>
+    <div>
+      <p>Dankjewel voor je input!</p>
+      <p>Scan de QR code om naar de website te gaan.</p>
+      <p>Dit scherm sluit over <span class="counter">20</span> seconden. Of druk op de knop om terug te beginnen.</p>
+    </div>
     <img src="../assets/images/qrcode.png" alt="">
   </div>
 </body>

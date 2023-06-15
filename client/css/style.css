@@ -51,6 +51,10 @@ nav {
   display: none;
 }
 
+.current_page {
+  border-bottom: 2px solid var(--light-green);
+}
+
 footer {
   background-color: var(--dark-green);
   height: 80vh;

@@ -22,7 +22,14 @@ const questions = [
   "Wat moet er meer te zien zijn op het buda eiland?",
 ];
 
+let question;
+
 const init = async () => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.config({
+    force3D: true,
+  });
+
   // glowing bounce effect
   gsap.fromTo(
     ".glow",
@@ -117,9 +124,16 @@ const connect = async (port) => {
           }
 
           if (currentScene === 2 && json.data[0] === 1 && !buttonPressed) {
-            buttonPressed = true;
-            submitForm();
-            moveToScene(3);
+            if (document.querySelector(".answer").value === ""){
+              document.querySelector(".warning").innerHTML = "Gelieve een antwoord in te vullen";
+              setTimeout(() => {
+                document.querySelector(".warning").innerHTML = "";
+              }, 3000);
+            } else {
+              buttonPressed = true;
+              submitForm();
+              moveToScene(3);
+            }
           }
         } catch (error) {
           //console.log(error);
@@ -185,42 +199,62 @@ const playArrowAnimation = () => {
 
 const submitForm = () => {
   const answer = document.querySelector(".answer").value;
-  sendAnswer(answer);
+  sendAnswer(question, answer);
   document.querySelector(".answer").value = "";
 }
 
-// Function to move to the specified scene
 const moveToScene = (sceneNumber) => {
   if (sceneNumber >= 1 && sceneNumber <= totalScenes) {
     currentScene = sceneNumber;
 
     if (currentScene === 2) {
-      document.querySelector(".question").innerHTML = questions[Math.floor(Math.random() * questions.length)];
-      gsap.fromTo(".scene_one", { x: 0 }, { duration: 1, x: -window.innerWidth });
-      setTimeout(function() {
-        document.querySelector(".scene_one").style.display = "none";
-      }, 1000);
-      document.querySelector(".scene_two").style.display = "grid";
+      question = questions[Math.floor(Math.random() * questions.length)];
+      document.querySelector(".question").innerHTML = question;
+
+      transition(".scene_one", ".scene_two");
+
       setTimeout(function() {
         buttonPressed = false;
       }, 2000);
     }
 
     if (currentScene === 3) {
-      document.querySelector(".scene_two").style.display = "none";
-      document.querySelector(".scene_three").style.display = "grid";
+      buttonPressed = false;
+      
+      transition(".scene_two", ".scene_three");
+      let counter = 20;
+
+      const sceneThreeCounter = setInterval(function() {
+        counter--;
+        document.querySelector(".counter").innerHTML = counter;
+      }, 1000);
+
       setTimeout(function() {
-        buttonPressed = false;
+        clearInterval(sceneThreeCounter);
         document.querySelector(".scene_three").style.display = "none";
         gsap.to(".scene_one", { x: 0 });
         playArrowAnimation();
         currentScene = 1;
-      }, 10000);
+      }, 20000);
     }
 
     console.log('Moving to Scene', currentScene);
   }
 }
+
+const transition = (from, to) => {
+  const tlTransition = gsap.timeline();
+  tlTransition.fromTo(from, { x: 0 }, { duration: 1, x: -window.innerWidth });
+  setTimeout(function () {
+    document.querySelector(to).style.display = "grid";
+  }, 500);
+  tlTransition.fromTo(to, { x: +window.innerWidth }, { duration: 1, x: 0 }, "<0.5");
+
+  setTimeout(function() {
+    document.querySelector(from).style.display = "none";
+  }, 1000);
+}
+
 
 /////////////////////////////
 /////////////////////////////
@@ -263,16 +297,17 @@ export async function getWalls() {
   return result.data.wallsEntries;
 }
 
-export async function sendAnswer(answer) {
+export async function sendAnswer(question, answer) {
   let date_time = new Date().toLocaleString();
 
   const test = await graphQLRequest(
-    `mutation createAnswer( $date_time: String, $data: String) {
-      save_answers_default_Entry(title: "Wat is Typische Kortrijkse Cultuur?", placewall: "K in Kortrijk", date: $date_time, useranswer: $data, authorId: 1) {
+    `mutation createAnswer( $question: String, $date_time: String, $data: String) {
+      save_answers_default_Entry(title: $question, placewall: "K in Kortrijk", date: $date_time, useranswer: $data, authorId: 1) {
         id
       }
     }`,
     {
+      question: question,
       date_time: date_time,
       data: answer,
     }

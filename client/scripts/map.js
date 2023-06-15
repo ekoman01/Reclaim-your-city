@@ -11,7 +11,7 @@ async function initMap() {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   // The map, centered at Uluru
-  map = new Map(document.querySelector(".map"), {
+  map = new Map(document.querySelector(".map_map"), {
     zoom: 13.5,
     center: position,
     mapId: "90161e24d64c70de",

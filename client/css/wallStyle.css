@@ -71,19 +71,34 @@ html {
   display: none;
   align-items: center;
   justify-items: center;
-  height: 100vh;
+  height: 120vh;
   margin: 5em 5em 0 5em;
 }
 
-.scene_three > p {
+.scene_three > div {
   align-self: start;
+}
+
+.scene_three > div > p {
   font-family: greycliff-cf, sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 5em;
+  font-weight: 500;
+  font-size: 3em;
   text-align: center;
   color: var(--off-black);
+}
+
+.scene_three > div > p:first-of-type {
+  font-weight: 700;
+  font-size: 5em;
   margin: 0 0 0.5em 0;
+}
+
+.scene_three > div > p:last-of-type {
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--dark-green);
+  margin: 5em 0 0 0;
 }
 
 .scene_three > img {
@@ -105,8 +120,13 @@ html {
   font-size: 7em;
   text-transform: uppercase;
   line-height: 1.55em;
-  padding: 0em 0.2em 0 0.2em;
   display: inline;
+}
+
+.question {
+  padding: 0em 0.2em 0 0.2em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .form_container {
@@ -124,4 +144,13 @@ form > div > input {
   background: none;
   border: none;
   border-bottom: var(--off-black) 0.2em dotted;
+}
+
+.warning {
+  color: var(--off-black);
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2em;
+  color: #ff4949;
 }

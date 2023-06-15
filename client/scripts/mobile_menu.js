@@ -6,7 +6,7 @@ const init = () => {
             gsap.fromTo(".mobile_nav_container", {x: 1000}, { x: 0});
             document.querySelector(".mobile_nav_container").style.display = "flex";
             gsap.to(".mobile_nav_button", { rotation: 180});
-            document.querySelector(".mobile_nav_button").src = "../assets/images/cross.png";
+            document.querySelector(".mobile_nav_button").src = "../assets/svg/cross.svg";
             document.querySelector("html").style.overflowY = "hidden";
             checked = true;
         } else {
@@ -16,7 +16,7 @@ const init = () => {
                 "none";
             }, 50);
             gsap.to(".mobile_nav_button", { rotation: -360});
-            document.querySelector(".mobile_nav_button").src = "../assets/images/menu.png";
+            document.querySelector(".mobile_nav_button").src = "../assets/svg/menu.svg";
             document.querySelector("html").style.overflowY = "unset";
             checked = false;
         }

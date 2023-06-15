@@ -1,6 +1,11 @@
 @import './style.css';
 
 .map {
+  text-decoration: underline;
+  text-decoration-color: var(--light-green);
+}
+
+.map {
   background-color: var(--light-green);
   height: 100vh;
   display: flex;
@@ -11,6 +16,7 @@
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
+
 .map_map {
   height: 90%;
   width: 95%;
