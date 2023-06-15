@@ -1,5 +1,7 @@
+@import './style.css';
+
 .map {
-  background-color: #46725b;
+  background-color: var(--light-green);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,7 +19,7 @@
 
 button {
   color: red;
-  background-color: black;
+  background-color: var(--off-black);
 }
 
 .button-23 {
@@ -32,8 +34,8 @@ button {
   font-family: inherit;
   font-weight: 500;
   color: black;
-  border: 1px solid black;
-  background-color: whitesmoke;
+  border: 1px solid var(--off-black);
+  background-color: var(--off-white);
 }
 .afbeelding {
   background-image: "https://www.designcities.net/wp-content/uploads/2018/04/City-of-Kortrijk-%C2%AEHenderyckx.jpg";
@@ -45,7 +47,7 @@ button {
   grid-template-columns: 1.5fr 2fr;
   grid-template-rows: 1fr;
   height: 30vh;
-  background-color: #46725b;
+  background-color: var(--light-green);
   gap: 2em;
 }
 
@@ -54,7 +56,7 @@ button {
 }
 
 .where_left > h1 {
-  color: #ebb656;
+  color: var(--gold);
   font-family: greycliff-cf, sans-serif;
   font-style: oblique;
   font-weight: 900;
@@ -68,7 +70,7 @@ button {
 }
 
 .where_right > p {
-  color: #ecedf2;
+  color: var(--off-white);
   font-size: 1.5em;
 }
 

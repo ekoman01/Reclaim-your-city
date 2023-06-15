@@ -1,3 +1,5 @@
+@import './style.css';
+
 header {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,7 +17,7 @@ header > div {
   grid-area: 1 / 1 / 2 / 2;
   align-self: end;
   width: 40%;
-  background-color: #ecedf2;
+  background-color: var(--off-white);
   padding: 1em 1em 0 2em;
   margin: 0 0 0 10em;
 }
@@ -68,7 +70,7 @@ header > div > p {
   font-size: 3em;
   text-align: center;
   line-height: 1em;
-  color: #ecedf2;
+  color: var(--off-white);
 }
 
 .archive_container > div > img {

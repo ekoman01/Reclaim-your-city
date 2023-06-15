@@ -1,3 +1,5 @@
+@import './style.css';
+
 header {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,7 +17,7 @@ header > div {
   grid-area: 1 / 1 / 2 / 2;
   align-self: end;
   width: 40%;
-  background-color: #ecedf2;
+  background-color: var(--off-white);
   padding: 1em 1em 0 2em;
   margin: 0 0 0 10em;
 }
@@ -43,7 +45,7 @@ header > div > p {
   font-weight: 900;
   font-size: 2.5em;
   display: inline-block;
-  background-color: #ebb656;
+  background-color: var(--gold);
   padding: 0 3em 0 0.5em;
   margin: 0 0 2em 2em;
 }
@@ -64,12 +66,12 @@ header > div > p {
 }
 
 .intro_right {
-  background-color: #001f0f;
+  background-color: var(--dark-green);
   display: flex;
 }
 
 .intro_right > p {
-  color: #ecedf2;
+  color: var(--off-white);
   font-size: 1.5em;
   justify-content: center;
   margin: 3em 5em 0 5em;
@@ -128,7 +130,7 @@ header > div > p {
   font-family: greycliff-cf, sans-serif;
   font-weight: 700;
   font-size: 3em;
-  color: #ecedf2;
+  color: var(--off-white);
 }
 
 .what_right > img {
@@ -141,13 +143,13 @@ header > div > p {
   grid-template-columns: 1.2fr 1fr;
   grid-template-rows: 1fr;
   height: 80vh;
-  background-color: #001f0f;
+  background-color: var(--dark-green);
   padding: 4em 4em 0 4em;
 }
 
 .music_left > div {
   margin: 3em 2.8em 0 auto;
-  background-color: #ebb656;
+  background-color: var(--gold);
   padding: 0.2em 2em 0.2em 1em;
   width: max-content;
 }
@@ -156,7 +158,7 @@ header > div > p {
   font-family: greycliff-cf, sans-serif;
   font-weight: 700;
   font-size: 3em;
-  color: #001f0f;
+  color: var(--off-black);
   padding: 0 0.8em 0 0;
   vertical-align: middle;
   display: inline-block;
@@ -170,7 +172,7 @@ header > div > p {
 .music_right > p {
   margin: 2em 0 0 0;
   font-size: 1.5em;
-  color: #ecedf2;
+  color: var(--off-white);
   width: 60%;
 }
 
@@ -182,7 +184,7 @@ header > div > p {
   font-family: greycliff-cf, sans-serif;
   font-weight: 900;
   font-size: 15em;
-  color: #001f0f;
+  color: var(--dark-green);
   line-height: 0.8em;
 }
 
@@ -235,7 +237,7 @@ header > div > p {
 }
 
 .eatndrink_bottom > div > p:first-of-type:not(:last-of-type) {
-  background-color: #ebb656;
+  background-color: var(--gold);
   width: max-content;
   padding: 0 2em 0 0.2em;
 }
@@ -258,7 +260,7 @@ header > div > p {
   grid-template-rows: 1fr;
   gap: 3em;
   height: 100vh;
-  background-color: #46725b;
+  background-color: var(--light-green);
   padding: 3em 3em 3em 3em;
   align-items: end;
 }
@@ -268,7 +270,7 @@ header > div > p {
   font-weight: 700;
   font-size: 4em;
   line-height: 1em;
-  color: #ecedf2;
+  color: var(--off-white);
   padding: 1em 0 1em 0;
 }
 
@@ -282,7 +284,7 @@ header > div > p {
 
 .wall_right > ul > li {
   font-size: 1.5em;
-  color: #ecedf2;
+  color: var(--off-white);
   padding: 0.5em 0 0.5em 0;
 }
 
@@ -293,24 +295,24 @@ header > div > p {
   padding: 3em 3em 3em 3em;
   align-items: center;
   height: 100vh;
-  background-color: #46725b;
+  background-color: var(--light-green);
 }
 
 .share_right > h3 {
   font-family: greycliff-cf, sans-serif;
   font-weight: 700;
   font-size: 4em;
-  color: #ecedf2;
+  color: var(--off-white);
 }
 
 .share_right > p:first-of-type {
-  color: #ecedf2;
+  color: var(--off-white);
   font-size: 1.5em;
   padding: 2em 0 2em 0;
 }
 
 .share_right > p:last-of-type {
-  color: #ebb656;
+  color: var(--gold);
   font-weight: 800;
   font-size: 3em;
 }
@@ -424,7 +426,7 @@ header > div > p {
     font-family: greycliff-cf, sans-serif;
     font-weight: 700;
     font-size: 3em;
-    color: #ecedf2;
+    color: var(--off-white);
   }
 
   .what_right > img {
@@ -468,7 +470,7 @@ header > div > p {
     width: 100%;
   }
   .music_right > p > a {
-    color: #46725b;
+    color: var(--light-green);
   }
 
   .deco {
@@ -560,7 +562,7 @@ header > div > p {
     padding: 3em 0.5em 3em 0.5em;
     align-items: center;
     height: 150vh;
-    background-color: #46725b;
+    background-color: var(--light-green);
   }
 
   .share_left {
@@ -580,13 +582,13 @@ header > div > p {
   }
 
   .share_right > p:first-of-type {
-    color: #ecedf2;
+    color: var(--off-white);
     font-size: 1.5em;
     padding: 2em 0 2em 0;
   }
 
   .share_right > p:last-of-type {
-    color: #ebb656;
+    color: var(--gold);
     font-size: 2em;
   }
 }

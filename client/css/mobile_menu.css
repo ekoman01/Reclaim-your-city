@@ -1,3 +1,5 @@
+@import './style.css';
+
 @media screen and (max-width: 768px) {
   nav {
     display: none;
@@ -6,7 +8,7 @@
   .mobile_nav {
     display: block;
     position: fixed;
-    background-color: #ecedf2;
+    background-color: var(--off-white);
     width: 100vw;
     z-index: 1;
     padding: 1em 0 0 1em;
@@ -24,7 +26,7 @@
     align-items: center;
     height: 90vh;
     width: 80vw;
-    background-color: #ebb656;
+    background-color: var(--gold);
   }
 
   .mobile_nav > div > ul {

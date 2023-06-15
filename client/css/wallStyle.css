@@ -1,3 +1,5 @@
+@import './style.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 html {
-  background-color: #ebb656;
+  background-color: var(--gold);
   overflow-y: hidden;
 }
 
@@ -80,7 +82,7 @@ html {
   font-weight: 700;
   font-size: 5em;
   text-align: center;
-  color: #1e1e1e;
+  color: var(--off-black);
   margin: 0 0 0.5em 0;
 }
 
@@ -94,8 +96,8 @@ html {
 }
 
 .question {
-  color: #ebb656;
-  background-color: #1e1e1e;
+  color: var(--gold);
+  background-color: var(--off-black);
   width: 100%;
   font-family: greycliff-cf, sans-serif;
   font-style: normal;
@@ -121,5 +123,5 @@ form > div > label, input {
 form > div > input {
   background: none;
   border: none;
-  border-bottom: #1e1e1e 0.2em dotted;
+  border-bottom: var(--off-black) 0.2em dotted;
 }

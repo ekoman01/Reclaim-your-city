@@ -1,3 +1,12 @@
+/* variables */
+:root {
+  --off-white: #ecedf2;
+  --off-black: #1e1e1e;
+  --dark-green: #001f0f;
+  --light-green: #46725b;
+  --gold: #ebb656;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +16,11 @@
   font-style: normal;
   font-weight: 600;
 
-  color: #1e1e1e;
+  color: var(--off-black);
 }
 
 html {
-  background-color: #ecedf2;
+  background-color: var(--off-white);
   overflow-x: hidden;
 }
 
@@ -43,7 +52,7 @@ nav {
 }
 
 footer {
-  background-color: #001f0f;
+  background-color: var(--dark-green);
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,13 +97,13 @@ footer {
 }
 
 .footer_white {
-  color: #ecedf2;
+  color: var(--off-white);
   text-decoration: none;
 }
 
 .footer_grey {
   text-decoration: none;
-  color: #63967b;
+  color: var(--light-green);
   font-weight: 200;
   font-size: 1.5em;
 }

@@ -1,3 +1,5 @@
+@import './style.css';
+
 header {
   padding: 1em 0 0 0;
   height: 100vh;
@@ -26,7 +28,7 @@ header {
 .what_is_intro {
   margin: 3em 0 0 0;
   height: 100vh;
-  background-color: #001f0f;
+  background-color: var(--dark-green);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -34,7 +36,7 @@ header {
 }
 
 .what_is_intro_left {
-  background-color: #ecedf2;
+  background-color: var(--off-white);
 }
 
 .what_is_intro_left > h2 {
@@ -54,7 +56,7 @@ header {
 }
 
 .what_is_intro_right > p {
-  color: #ecedf2;
+  color: var(--off-white);
 }
 
 .what_is_intro_right_quote {
@@ -66,7 +68,7 @@ header {
 
 .what_is_list {
   height: 80vh;
-  background-color: #001f0f;
+  background-color: var(--dark-green);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
@@ -75,7 +77,7 @@ header {
 }
 
 .what_is_list_left {
-  color: #ecedf2;
+  color: var(--off-white);
 }
 
 .what_is_list_left > p {
@@ -83,7 +85,7 @@ header {
   font-weight: 900;
   font-size: 2.5em;
   display: inline-block;
-  background-color: #ebb656;
+  background-color: var(--gold);
   padding: 0 3em 0 0.5em;
 }
 
@@ -100,7 +102,7 @@ header {
 }
 
 .what_is_list_left > ul > li {
-  color: #ecedf2;
+  color: var(--off-white);
   font-family: greycliff-cf, sans-serif;
   font-weight: 700;
   font-size: 4.5em;
@@ -182,7 +184,7 @@ p {
 
 .for_who_right > div > h3 {
   display: inline-block;
-  background-color: #ebb656;
+  background-color: var(--gold);
   padding: 0 3em 0 0;
   margin: 0.5em 0 0 0;
   line-height: 1em;
@@ -194,7 +196,7 @@ p {
 }
 
 .for_who_right > div > a {
-  color: #46725b;
+  color: var(--light-green);
 }
 
 .what > h2 {
@@ -242,7 +244,7 @@ p {
 
 .what_container_left_second,
 .what_container_right_second {
-  background-color: #ebb656;
+  background-color: var(--gold);
   width: 100%;
   padding: 1em 1em 1em 0;
   margin: 0 0 3em 0;
@@ -276,7 +278,7 @@ p {
 }
 
 .where_right > a {
-  color: #46725b;
+  color: var(--light-green);
 }
 
 .outro {
@@ -293,7 +295,7 @@ p {
 
 .outro_date {
   font-weight: 900;
-  color: #ebb656;
+  color: var(--gold);
 }
 
 .outro > p {
@@ -343,7 +345,7 @@ p {
   }
 
   .what_is_intro_left {
-    background-color: #ecedf2;
+    background-color: var(--off-white);
   }
 
   .what_is_intro_left > h2 {
@@ -357,7 +359,7 @@ p {
 
   .what_is_intro_right > p {
     margin: 1em 0 0 0.5em;
-    color: #ecedf2;
+    color: var(--off-white);
   }
 
   .what_is_intro_right_quote {
@@ -373,14 +375,14 @@ p {
   }
 
   .what_is_list_left {
-    color: #ecedf2;
+    color: var(--off-white);
     height: max-content;
   }
 
   .what_is_list_left > p {
     font-size: 2em;
     display: inline-block;
-    background-color: #ebb656;
+    background-color: var(--gold);
     padding: 0 3em 0 0.5em;
   }
 
@@ -482,7 +484,7 @@ p {
 
   .for_who_right > div > h3 {
     display: inline-block;
-    background-color: #ebb656;
+    background-color: var(--gold);
     padding: 0 3em 0 0;
     margin: 0.5em 0 0 0;
     line-height: 1em;
@@ -494,7 +496,7 @@ p {
   }
 
   .for_who_right > div > a {
-    color: #46725b;
+    color: var(--light-green);
   }
 
   .what {
@@ -604,7 +606,7 @@ p {
 
   .outro_date {
     font-weight: 900;
-    color: #ebb656;
+    color: var(--gold);
   }
 
   .outro > p {
