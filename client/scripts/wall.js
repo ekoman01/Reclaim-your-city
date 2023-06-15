@@ -19,7 +19,7 @@ const questions = [
   "Wat is er te doen aan de leie?",
   "Wat zijn enkele bekende kunstwerken in Kortrijk?",
   "Wat is je favo vorm van kunst op het bude eiland?",
-  "Wat mnoet er meer te zien zijn op het buda eiland?",
+  "Wat moet er meer te zien zijn op het buda eiland?",
 ];
 
 const init = async () => {
@@ -186,6 +186,7 @@ const playArrowAnimation = () => {
 const submitForm = () => {
   const answer = document.querySelector(".answer").value;
   sendAnswer(answer);
+  document.querySelector(".answer").value = "";
 }
 
 // Function to move to the specified scene
@@ -195,7 +196,10 @@ const moveToScene = (sceneNumber) => {
 
     if (currentScene === 2) {
       document.querySelector(".question").innerHTML = questions[Math.floor(Math.random() * questions.length)];
-      document.querySelector(".scene_one").style.display = "none";
+      gsap.fromTo(".scene_one", { x: 0 }, { duration: 1, x: -window.innerWidth });
+      setTimeout(function() {
+        document.querySelector(".scene_one").style.display = "none";
+      }, 1000);
       document.querySelector(".scene_two").style.display = "grid";
       setTimeout(function() {
         buttonPressed = false;
@@ -208,6 +212,7 @@ const moveToScene = (sceneNumber) => {
       setTimeout(function() {
         buttonPressed = false;
         document.querySelector(".scene_three").style.display = "none";
+        gsap.to(".scene_one", { x: 0 });
         playArrowAnimation();
         currentScene = 1;
       }, 10000);
