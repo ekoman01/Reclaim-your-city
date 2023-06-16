@@ -98,8 +98,8 @@ footer {
   margin: 0 0 5em 0;
 }
 
-.footer_left_socials > img {
-  margin: 0 2em 0 0;
+.footer_left_socials > a {
+  margin: 0 2em 0 2em;
 }
 
 .footer_right {
@@ -165,8 +165,8 @@ footer {
     margin: 0 0 5em 0;
   }
 
-  .footer_left_socials > img {
-    margin: 0 2em 0 1em;
+  .footer_left_socials > a {
+    margin: 0 3em 0 3em;
   }
 
   .footer_right {
@@ -182,7 +182,7 @@ footer {
 
   .footer_right > ul > li {
     margin: 0 0 2em 0;
-}
+  }
 
   .footer_list_title {
     font-size: 2em;

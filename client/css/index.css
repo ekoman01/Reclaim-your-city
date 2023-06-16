@@ -384,6 +384,7 @@ p {
     display: inline-block;
     background-color: var(--gold);
     padding: 0 3em 0 0.5em;
+    margin: 1em 0 0 0;
   }
 
   .what_is_list_left > ul {
@@ -405,6 +406,10 @@ p {
 
   .what_is_list_right {
     justify-self: center;
+  }
+
+  .what_is_list_right > img {
+    margin: 0 0 4em 0;
   }
 
   .middle {
