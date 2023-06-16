@@ -1,4 +1,4 @@
-@import './style.css';
+@import "./style.css";
 
 header {
   display: grid;
@@ -489,8 +489,8 @@ header > div > p {
   .eatndrink {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 210vh;
+    grid-template-rows: 0.1fr 1fr;
+    height: 100%;
     margin: 0 0.5em 5em 0.5em;
   }
 
@@ -515,15 +515,24 @@ header > div > p {
   }
 
   .eatndrink_bottom > div {
-    margin: 2em 0 0 0;
-    width: min-content;
+    margin: 5em 0 0 0;
+    width: 100%;
+  }
+  .eatndrink_bottom > div > img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
   }
 
   .eatndrink_bottom_viewmore {
     align-self: center;
+    text-align: center;
     font-size: 1.5em;
     line-height: 1.5em;
-    padding: 2em 0 0 1em;
+    padding: 0 0 0 0;
   }
 
   .wall {
@@ -590,5 +599,11 @@ header > div > p {
   .share_right > p:last-of-type {
     color: var(--gold);
     font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  .eatndrink {
+    margin: 0 0.5em -2em 0.5em;
   }
 }

@@ -427,13 +427,12 @@ p {
     padding: 1em 0 0 0;
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     align-items: center;
     justify-content: center;
   }
 
   .middle_object {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -632,5 +631,23 @@ p {
 
   .outro > p > img {
     display: none;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  .what_is_list {
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5em 1em 0 1em;
+  }
+
+  .what_is_list_right {
+    margin: 0 0 2em 0;
+  }
+
+  .middle {
+    height: 60vh;
   }
 }
