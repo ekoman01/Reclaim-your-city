@@ -490,7 +490,7 @@ header > div > p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 180vh;
+    height: 210vh;
     margin: 0 0.5em 5em 0.5em;
   }
 
@@ -559,9 +559,9 @@ header > div > p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 3em 0.5em 3em 0.5em;
+    padding: 15em 0.5em 3em 0.5em;
     align-items: center;
-    height: 150vh;
+    height: 100%;
     background-color: var(--light-green);
   }
 
