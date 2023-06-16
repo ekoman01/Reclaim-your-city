@@ -602,7 +602,7 @@ header > div > p {
   }
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 412px) and (max-width: 767px)  {
   .eatndrink {
     margin: 0 0.5em -2em 0.5em;
   }
