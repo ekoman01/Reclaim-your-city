@@ -59,13 +59,15 @@ footer {
   background-color: var(--dark-green);
   height: 80vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   grid-template-rows: 1fr;
   padding: 2em 0 0 0;
 }
 
 .footer_left {
-  margin: 0 10em 0 5em;
+  margin: 0 10em 2em 5em;
+  padding: 0 5em 0 0;
+  border-right: var(--off-white) solid 1px;
 }
 
 .footer_left > img {
@@ -75,7 +77,21 @@ footer {
 .footer_left > p {
   font-size: 3.2em;
   line-height: 1.2em;
-  padding: 0 0 1.5em 0;
+  padding: 0 0 1em 0;
+}
+
+.footer_left > form > input {
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  color: var(--off-white);
+}
+
+.footer_left > form > button {
+  background: none;
+  border: none;
+  float: right;
+  margin: 0 1em 0 0;
 }
 
 .footer_left > hr {
@@ -130,10 +146,12 @@ footer {
   .footer_left {
     order: 2;
     margin: 0 1em 0 1em;
+    padding: 0 0 0 0;
+    border: none;
   }
 
   .footer_left > img {
-    margin: 0 0 3em 0;
+    margin: 2em 0 3em 0;
   }
 
   .footer_left > p {
@@ -161,6 +179,10 @@ footer {
     columns: 1;
     column-gap: 0;
   }
+
+  .footer_right > ul > li {
+    margin: 0 0 2em 0;
+}
 
   .footer_list_title {
     font-size: 2em;
