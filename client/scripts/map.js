@@ -32,6 +32,7 @@ async function initMap() {
       50,
       "Meer info",
       "Broel",
+      "De Broeltorens zijn twee torens in de stad Kortrijk en bevinden zich langs de Broelkaai en Verzetskaai. De beide torens met een brug over de rivier de Leie dateren uit de middeleeuwen en zijn een beschermd monument",
     ],
     [
       "K in Kortrijk",
@@ -42,6 +43,7 @@ async function initMap() {
       50,
       "Meer info",
       "Broel",
+      "Een plaats waar mode, vrije tijd, interieur, horeca en zoveel meer samenkomen.",
     ],
     [
       "Begijnhof",
@@ -52,9 +54,10 @@ async function initMap() {
       50,
       "Meer info",
       "Broel",
+      "Het Begijnhof in Kortrijk werd in 1238 door Johanna van Constantinopel gesticht.",
     ],
     [
-      "Skatebowl Albertpark",
+      "Skatebowl <br> Albertpark",
       50.83409970760863,
       3.270293270215407,
       "../assets/svg/rivier.svg",
@@ -62,6 +65,7 @@ async function initMap() {
       50,
       "Meer info",
       "Broel",
+      "De skatebowl in Kortrijk is de allereerste skatebowl in België die naam waardig. Dit 'concretepark' werd door Team Pain gebouwd.",
     ],
     [
       "NoordBrug",
@@ -72,6 +76,7 @@ async function initMap() {
       50,
       "Meer info",
       "Noord",
+      "De Noordbrug is een brug in centrum van de stad Kortrijk. De brug, die vernoemd werd naar de nabijgelegen Noordstraat, overspant de rivier de Leie en verbindt de Beheerstraat met de Noordstraat.",
     ],
     [
       "Kortrijk Weide",
@@ -82,6 +87,7 @@ async function initMap() {
       50,
       "Meer info",
       "Noord",
+      "Kortrijk Weide is het nieuwe stadsdeel waar verschillende functies samen komen. Het Nelson Mandelaplein is een evenementenplein dat plaats biedt aan maar liefst 15 000 toeschouwers.",
     ],
     [
       "Buda brug",
@@ -92,9 +98,10 @@ async function initMap() {
       50,
       "Meer info",
       "Buda",
+      "Sinds 2015 rijden, lopen en fietsen bewoners en bezoekers van Kortrijk over de door architectenbureau ZJA ontworpen Budabrug over de rivier de Leie van en naar het Buda-eiland.",
     ],
     [
-      "Koningin Astridpark",
+      "Koningin <br> Astridpark",
       50.834324539045305,
       3.2583107413794417,
       "../assets/svg/rivier.svg",
@@ -102,9 +109,10 @@ async function initMap() {
       50,
       "Meer info",
       "Buda",
+      "Het park dankt zijn naam aan het bezoek dat koningin Astrid op 5 april 1935 aan Kortrijk bracht.",
     ],
     [
-      "TEXTURE - Flax & River Lys Museum",
+      "Texture Museum",
       50.83051890394925,
       3.2557554138642963,
       "../assets/svg/rivier.svg",
@@ -112,6 +120,7 @@ async function initMap() {
       50,
       "Meer info",
       "Buda",
+      "Museum open 10-17 uur, gesloten op maandag en op feestdagen (24/12, 25/12, 31/12, 1/01)",
     ],
   ];
 
@@ -140,12 +149,16 @@ async function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
+      maxWidth: 250,
       content:
+        "<div class='marked'>" +
+        "<p>" +
         currMarker[0] +
-        "<br>" +
-        currMarker[7] +
-        "<br>" +
-        "<button class='button-23' role='button'>" +
+        "</p>" +
+        "<p>" +
+        currMarker[8] +
+        "</p>" +
+        "<button class='markbutton' role='button'>" +
         currMarker[6] +
         "</button>",
     });
