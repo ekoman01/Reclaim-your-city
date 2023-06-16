@@ -192,7 +192,7 @@ async function initMap() {
     let request;
     if (currMarker[7] == "Broel") {
       request = {
-        origin: { lat: 50.82818419398026, lng: 3.257600642724414 },
+        origin: { lat: 50.83076640730554, lng: 3.2669242837072394},
         destination: { lat: currMarker[1], lng: currMarker[2] },
         travelMode: google.maps.TravelMode.WALKING,
       };
