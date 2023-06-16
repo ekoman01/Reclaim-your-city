@@ -4,7 +4,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  height: 100%;
+  height: 110vh;
   margin: 0 0 10em 0;
 }
 
@@ -106,14 +106,14 @@ header > div > p {
     aspect-ratio: 1/2;
     object-fit: cover;
     object-position: top center;
-    height: 80%;
+    height: 78%;
   }
 
   header > div {
-    align-self: start end;
+    align-self: end;
     width: 100%;
     background-color: unset;
-    padding: 0 0 0 1em;
+    padding: 0 0 5em 1em;
     margin: 0 0 0 0;
   }
 

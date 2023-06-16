@@ -371,12 +371,16 @@ p {
     height: 180vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 20em 0 0 0;
+    padding: 20em 1em 0 1em;
   }
 
   .what_is_list_left {
     color: var(--off-white);
-    height: max-content;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    margin: 2em 0 0 0 0;
   }
 
   .what_is_list_left > p {
@@ -384,7 +388,6 @@ p {
     display: inline-block;
     background-color: var(--gold);
     padding: 0 3em 0 0.5em;
-    margin: 1em 0 0 0;
   }
 
   .what_is_list_left > ul {
@@ -409,7 +412,7 @@ p {
   }
 
   .what_is_list_right > img {
-    margin: 0 0 4em 0;
+    height: 95%;
   }
 
   .middle {
