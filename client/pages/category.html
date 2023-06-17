@@ -53,7 +53,7 @@
     </header>
     <main>
       <article class="locked">
-        <img src="../assets/images/lock.png" alt="" />
+        <img class="lock" src="../assets/images/lock.png" alt="" />
         <hr />
         <p>Locked till after the festival</p>
         <p class="timer"></p>
@@ -65,12 +65,12 @@
         <p class="footer_white">Follow us along our story, and let us send a newsletter.</p>
         <form action="">
           <input class="email" type="text" placeholder="example@gmail.com">
-          <button><img src="./assets/svg/arrow.svg" alt=""></button>
+          <button><img src="../assets/svg/arrow.svg" alt=""></button>
         </form>
         <hr>
         <div class="footer_left_socials"> 
           <img src="../assets/svg/facebook.svg" alt="">
-          <img src="../assets/svg/instagram.svg" alt="">
+          <a href="https://www.instagram.com/goldenvoiceskortrijk/"><img class="insta" src="../assets/svg/instagram.svg" alt=""></a>
           <img src="../assets/svg/tiktok.svg" alt="">
         </div>
       </div>
@@ -114,17 +114,42 @@
       const urlParams = new URLSearchParams(queryString);
 
       const fillPage = () => {
-        const name = urlParams.get(`category`);
-        document.querySelector(`.place`).innerHTML = name;
-        document.querySelector(`.place_description`).innerHTML =
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.";
+        const places = [
+          {name:"K in Kortrijk", description:"Een plaats waar mode, vrije tijd, interieur, horeca en zoveel meer samenkomen."},
+          {name:"Koningin Astrid park", description:"Het park dankt zijn naam aan het bezoek dat koningin Astrid op 5 april 1935 aan Kortrijk bracht."},
+          {name:"Texture museum", description:"Museum open 10-17 uur, gesloten op maandag en op feestdagen (24/12, 25/12, 31/12, 1/01)"},
+          {name:"Begijnhof", description:"Het Begijnhof in Kortrijk werd in 1238 door Johanna van Constantinopel gesticht."},
+          {name:"Kortrijk Weide", description:"Kortrijk Weide is het nieuwe stadsdeel waar verschillende functies samen komen. Het Nelson Mandelaplein is een evenementenplein dat plaats biedt aan maar liefst 15 000 toeschouwers."},
+          {name:"Skatebowl Albertpark", description:"De skatebowl in Kortrijk is de allereerste skatebowl in België die naam waardig. Dit 'concretepark' werd door Team Pain gebouwd."},
+        ]
+
+        const index = urlParams.get(`category`);
+        console.log(index);
+        document.querySelector(`.place`).innerHTML = places[parseInt(index)].name;
+        document.querySelector(`.place_description`).innerHTML = places[index].description;
       };
+
+      const animation = () => {
+        const tl =  gsap.timeline({repeat:-1});
+        tl.to(".lock", 0.1, {rotate: "+5", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", duration: 0.1});
+        tl.to(".lock", 0.1, {rotate: "-5", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", rotate: "0", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", rotate: "0"}, "+=1");
+        tl.to(".lock", 0.1, {rotate: "-5", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", duration: 0.1});
+        tl.to(".lock", 0.1, {rotate: "+5", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", rotate: "0", transformOrigin: '50% 100%', duration: 0.1});
+        tl.to(".lock", {x:"0", rotate: "0"}, "+=1");
+      }
 
       const init = () => {
         fillPage();
+        animation();
       };
 
       init();
     </script>
+    <script src="../scripts/all.js"></script>
   </body>
 </html>

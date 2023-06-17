@@ -44,7 +44,7 @@
       </div>
     </div>
     <header>
-      <img src="../assets/images/festival_header.png" alt="" />
+      <img src="../assets/images/archive_header.png" alt="" />
       <div>
         <h1>The Archive.</h1>
         <p>
@@ -108,12 +108,12 @@
         <p class="footer_white">Follow us along our story, and let us send a newsletter.</p>
         <form action="">
           <input class="email" type="text" placeholder="example@gmail.com">
-          <button><img src="./assets/svg/arrow.svg" alt=""></button>
+          <button><img src="../assets/svg/arrow.svg" alt=""></button>
         </form>
         <hr>
         <div class="footer_left_socials"> 
           <img src="../assets/svg/facebook.svg" alt="">
-          <img src="../assets/svg/instagram.svg" alt="">
+          <a href="https://www.instagram.com/goldenvoiceskortrijk/"><img class="insta" src="../assets/svg/instagram.svg" alt=""></a>
           <img src="../assets/svg/tiktok.svg" alt="">
         </div>
       </div>
@@ -155,18 +155,18 @@
     <script>
       const goToCategory = () => {
         const categories = [
-          "kInKortrijk",
-          "begijnhof",
-          "skatepark",
-          "kortrijkWeide",
-          "astridPark",
-          "textureMuseum",
+          {id: "kInKortrijk", index: 0},
+          {id: "astridPark", index: 1},
+          {id: "textureMuseum", index: 2},
+          {id: "begijnhof", index: 3},
+          {id: "kortrijkWeide", index: 4},
+          {id: "skatepark", index: 5},
         ];
 
         categories.forEach((category) => {
-          const categoryElement = document.querySelector(`.${category}`);
+          const categoryElement = document.querySelector(`.${category.id}`);
           categoryElement.addEventListener("click", () => {
-            window.location.href = `./category.html?category=${category}`;
+            window.location.href = `./category.html?category=${category.index}`;
           });
         });
       };
@@ -177,5 +177,6 @@
 
       init();
     </script>
+    <script src="../scripts/all.js"></script>
   </body>
 </html>

@@ -17,6 +17,7 @@
 
     <script type="module" src="../scripts/mobile_menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>	
     <title>Golden Voices - Festival</title>
   </head>
   <body>
@@ -80,7 +81,7 @@
           <div class="what_left">
             <div>
               <h3>Walk</h3>
-              <img src="../assets/svg/gold_star_small.svg" alt="">
+              <img class="starImage" src="../assets/svg/gold_star_small.svg" alt="">
             </div>
             <p>You can walk along one of our several routes spanning through the center of Kortrijk! On this walk you will pass along some of the nice places in Kortrijk where you can hang out with students and friends. This is everything from café’s, bars and fun little shops for ceramics, rugs, etc... But thats not all. At the end of every route we’ve chose some special places where a mysterious golden wall can be found.</p>
           </div>
@@ -104,29 +105,29 @@
         </div>
       </article>
       <article class="deco">
-        <img src="../assets/svg/small_star.svg" alt="">
-        <p>EXPRESS YOURSELF</p>
+        <img class="decoImage" src="../assets/svg/small_star.svg" alt="">
+        <p class="decoText">EXPRESS YOURSELF</p>
       </article>
       <article class="eatndrink">
         <div class="eatndrink_top">
           <div>
             <h3>Eat & drink</h3>
-            <img src="../assets/svg/apple.svg" alt="">
+            <img class="apple" src="../assets/svg/apple.svg" alt="">
           </div>
           <p>The Festival will also have food stands, these stands are going to be upheld by local restaurant /cafe owners.</p>
         </div>
         <div class="eatndrink_bottom">
-          <div>
+          <div class="one">
             <img src="../assets/images/dedingen.png" alt="">
             <p>De Dingen - </p>
             <p>A coffee bar that also sells cake and tarts.</p>
           </div>
-          <div>
+          <div class="two">
             <img src="../assets/images/sansaeb.png" alt="">
             <p>San Saeb - </p>
             <p>A authentic Thai restaurant.</p>
           </div>
-          <div>
+          <div class="three">
             <img src="../assets/images/manuelkartel.png" alt="">
             <p>Manuel Kartel - </p>
             <p>A South-American restaurant, with a passion for chilli.</p>
@@ -169,12 +170,12 @@
         <p class="footer_white">Follow us along our story, and let us send a newsletter.</p>
         <form action="">
           <input class="email" type="text" placeholder="example@gmail.com">
-          <button><img src="./assets/svg/arrow.svg" alt=""></button>
+          <button><img src="../assets/svg/arrow.svg" alt=""></button>
         </form>
         <hr>
         <div class="footer_left_socials"> 
           <img src="../assets/svg/facebook.svg" alt="">
-          <img src="../assets/svg/instagram.svg" alt="">
+          <a href="https://www.instagram.com/goldenvoiceskortrijk/"><img class="insta" src="../assets/svg/instagram.svg" alt=""></a>
           <img src="../assets/svg/tiktok.svg" alt="">
         </div>
       </div>
@@ -215,5 +216,6 @@
     </footer>
 
     <script src="../scripts/festival.js"></script>
+    <script src="../scripts/all.js"></script>
   </body>
 </html>

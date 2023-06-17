@@ -60,6 +60,13 @@ header > div > p {
   align-items: center;
   justify-content: center;
   height: 100%;
+
+  transition: ease-in-out 0.2s;
+}
+
+.archive_container > div:hover {
+  box-shadow: inset 0 0 30px var(--off-white);
+  transition: ease-in-out 0.2s;
 }
 
 .archive_container > div > p {
@@ -173,5 +180,14 @@ header > div > p {
 
   .archive_container > div > img {
     width: 100%;
+  }
+
+  .locked > p:first-of-type {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .locked > p:last-of-type {
+    font-size: 2.5em;
   }
 }

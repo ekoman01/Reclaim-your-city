@@ -1,0 +1,1 @@
+gsap.to(".insta", 0.3, { y: "-=10", yoyo: true, repeat: -1 });

@@ -222,10 +222,11 @@ p {
   display: inline-flex;
   justify-self: start;
   align-items: start;
+  width: 110%;
 }
 
 .what_container > div > img {
-  margin: 0 1em 0 0;
+  padding: 0 1em 0 0;
 }
 
 .what_container > div > div > h3 {
@@ -291,6 +292,11 @@ p {
 .outro_underline {
   font-weight: 900;
   text-decoration: solid underline;
+  margin: 0 0.5em 0 0;
+}
+
+.outro_underline:hover {
+  color: var(--light-green);
 }
 
 .outro_date {
@@ -569,7 +575,7 @@ p {
   }
 
   .what_container > div > * {
-    margin: 0 0 0 0;
+    margin: 0 1.5em 0 0;
   }
 
   .what_container > div > img {

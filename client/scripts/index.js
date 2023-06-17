@@ -65,6 +65,31 @@ gsap.fromTo(
   }
 );
 
+gsap.to(".middleObject", 0.8, {
+  scale: "1.02",
+  ease: Linear.easeNone,
+  repeat: -1,
+  yoyo: true,
+});
+
+gsap.fromTo(
+  ".whereImage",
+  { x: -100, opacity: 0 },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".where",
+      start: "start 100%",
+      end: "start 40%",
+      //markers: { fontSize: "25px", fontWeight: "bold" },
+      toggleActions: "play none none none",
+      scrub: 0.5,
+    },
+  }
+);
+
 gsap.fromTo(
   ".finger",
   { scale: 0, opacity: 0 },

@@ -23,8 +23,74 @@ const introLeftHover = () => {
     });
 };
 
+const animations = () => {
+  gsap.to(".starImage", 4, {
+    rotation: "90",
+    ease: Linear.easeNone,
+    repeat: -1,
+  });
+
+  gsap.to(".apple", 0.3, { y: "-=10", yoyo: true, repeat: -1 });
+
+  gsap.fromTo(
+    ".decoText",
+    { x: -200, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".deco",
+        start: "start 50%",
+        end: "start 10%",
+        //markers: { fontSize: "25px", fontWeight: "bold" },
+        toggleActions: "play none none none",
+        scrub: 0.5,
+      },
+    }
+  );
+  gsap.fromTo(
+    ".decoImage",
+    { x: 200, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".deco",
+        start: "start 50%",
+        end: "start 10%",
+        //markers: { fontSize: "25px", fontWeight: "bold" },
+        toggleActions: "play none none none",
+        scrub: 0.5,
+      },
+    }
+  );
+
+  // const eatDrinkTl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".eatndrink_bottom",
+  //     start: "start 100%",
+  //     end: "start 40%",
+  //     markers: { fontSize: "25px", fontWeight: "bold" },
+  //     toggleActions: "play none none none",
+  //     scrub: 0.5,
+  //   },
+  // });
+  // eatDrinkTl.fromTo(".one", { x: -200, opacity: 0 }, { x: 0, opacity: 1 });
+  // eatDrinkTl.fromTo(".two", { x: -200, opacity: 0 }, { x: 0, opacity: 1 }, ">");
+  // eatDrinkTl.fromTo(".three", { x: -200, opacity: 0 }, { x: 0, opacity: 1 }, ">");
+    
+};
+
 const init = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.config({
+    force3D: true,
+  });
+
   introLeftHover();
+  animations();
 };
 
 init();
