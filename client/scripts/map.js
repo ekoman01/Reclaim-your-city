@@ -4,19 +4,11 @@ let map;
 async function initMap() {
   // The location of 50.83056311268548, 3.2633354880559464
   const position = { lat: 50.83056311268548, lng: 3.2633354880559464 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 6051445 (bug fix map)
 
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-<<<<<<< HEAD
-  map = new Map(document.getElementById("map"), {
-=======
   map = new Map(document.querySelector(".map_map"), {
->>>>>>> 6051445 (bug fix map)
     zoom: 15.4,
     center: position,
     mapId: "90161e24d64c70de",
