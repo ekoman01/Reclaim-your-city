@@ -15,6 +15,10 @@ let buttonPressed = false;
 
 const questions = [
   "Wat is typische Kortrijkse cultuur?",
+  "Wat kan je niet missen in Kortrijk?",
+  "Beste cafe op de grote markt?",
+  "Het beste park om rust te vinden?",
+  "Bij de K in Kortrijk moet je hier zijn geweest",
   "Wat zijn enkele verborgen pareltjes in Kortrijk?",
   "Wat is er te doen aan de leie?",
   "Wat zijn enkele bekende kunstwerken in Kortrijk?",
@@ -281,21 +285,6 @@ export const graphQLRequest = async (query, variables = {}) => {
   }
   return result;
 };
-
-export async function getWalls() {
-  const result = await graphQLRequest(
-    `query getWalls {
-      wallsEntries {
-        ... on walls_default_Entry {
-          id
-          title
-          placewall
-        }
-      }
-    }`
-  );
-  return result.data.wallsEntries;
-}
 
 export async function sendAnswer(question, answer) {
   let date_time = new Date().toLocaleString();

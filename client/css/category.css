@@ -1,0 +1,274 @@
+@import "./style.css";
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  margin: 0 0 5em 0;
+}
+
+header > img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+}
+
+header > div {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: end;
+  width: 40%;
+  background-color: var(--off-white);
+  padding: 1em 1em 0 2em;
+  margin: 0 0 0 10em;
+}
+
+header > div > h1 {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5em;
+}
+
+header > div > p {
+  font-size: 1.5em;
+}
+
+.locked {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  height: 100%;
+  margin: 10em 0;
+}
+
+.locked > hr {
+  width: 50%;
+  margin: 2em auto;
+}
+
+.locked > p:first-of-type {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.locked > p:last-of-type {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3em;
+}
+
+.archive {
+  display: none;
+  height: max-content;
+  margin: 1em 5em 1em 5em;
+}
+
+.archive > h2 {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3em;
+  margin: 0 0 0 0;
+}
+
+.archive > p {
+  font-size: 1.5em;
+}
+
+.archive_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  height: 100%;
+  margin: 5em 0 0 0;
+  row-gap: 3em;
+}
+
+.archive_list_item {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: start;
+  gap: 1em;
+  max-width: 50vw;
+}
+
+.archive_list_item_left {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.archive_list_item_left > p {
+  grid-area: 1 / 1 / 2 / 2;
+  color: var(--off-white);
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.archive_list_item_left > img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  z-index: -1;
+}
+
+.archive_list_item_right {
+  justify-self: start;
+}
+
+.question {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.date {
+  font-size: 1.2em;
+  font-style: oblique;
+  color: var(--light-green);
+}
+
+.answer {
+  font-size: 1.5em;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    margin: 0 0 5em 0;
+  }
+
+  header > img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1/2;
+    object-fit: cover;
+    object-position: top center;
+    height: 78%;
+  }
+
+  header > div {
+    align-self: end;
+    width: 100%;
+    background-color: unset;
+    padding: 0 0 0 1em;
+    margin: 0 0 0 0;
+  }
+
+  header > div > h1 {
+    font-size: 3em;
+  }
+
+  header > div > p {
+    font-size: 1.5em;
+  }
+
+  .locked > p:first-of-type {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .locked > p:last-of-type {
+    font-size: 2.5em;
+  }
+
+  .archive {
+    display: none;
+    height: max-content;
+    margin: 1em 0.5em 1em 0.5em;
+  }
+
+  .archive > h2 {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3em;
+    margin: 0 0 0 0;
+  }
+
+  .archive > p {
+    font-size: 1.5em;
+  }
+
+  .archive_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    height: 100%;
+    margin: 5em 0 0 0;
+  }
+
+  .archive_list_item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 100%;
+    justify-items: center;
+    align-items: start;
+    margin: 0 0 5em 0;
+    gap: 1em;
+    max-width: 100%;
+    max-height: min-content;
+  }
+
+  .archive_list_item_left {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .archive_list_item_left > p {
+    grid-area: 1 / 1 / 2 / 2;
+    color: var(--off-white);
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5em;
+  }
+
+  .archive_list_item_left > img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .archive_list_item_right {
+    justify-self: start;
+  }
+
+  .question {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2em;
+  }
+
+  .date {
+    font-size: 1.2em;
+    font-style: oblique;
+    color: var(--light-green);
+  }
+
+  .answer {
+    font-size: 1.5em;
+  }
+}
