@@ -56,13 +56,8 @@ async function initMap() {
     ],
     [
       "Skatebowl Albertpark",
-<<<<<<< HEAD
       50.83409970760863, 
       3.270293270215407,   
-=======
-      50.83409970760863,
-      3.270293270215407,
->>>>>>> 6051445 (bug fix map)
       "../assets/svg/rivier.svg",
       50,
       50,
@@ -105,11 +100,7 @@ async function initMap() {
     ],
     [
       "Koningin Astridpark",
-<<<<<<< HEAD
       50.834324539045305, 
-=======
-      50.834324539045305,
->>>>>>> 6051445 (bug fix map)
       3.2583107413794417,
       "../assets/svg/rivier.svg",
       50,
@@ -120,11 +111,7 @@ async function initMap() {
     ],   
     [
       "TEXTURE - Flax & River Lys Museum",
-<<<<<<< HEAD
       50.83051890394925, 
-=======
-      50.83051890394925,
->>>>>>> 6051445 (bug fix map)
       3.2557554138642963,
       "../assets/svg/rivier.svg",
       50,
@@ -163,13 +150,6 @@ async function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-<<<<<<< HEAD
-      content: 
-      "<div class='marked'>" + 
-      "<p>" + currMarker[0] + "</p>" + 
-      "<p>" + currMarker[8] + "</p>" + 
-      "<button class='markbutton' role='button'>" + currMarker[6] + "</button>",
-=======
       content:
         "<div class='marked'>" +
         "<p>" +
@@ -181,9 +161,6 @@ async function initMap() {
         "<button class='markbutton' role='button'>" +
         currMarker[6] +
         "</button>",
-    });
->>>>>>> 6051445 (bug fix map)
-
     });
     
     let buttons = document.querySelectorAll("button-23");
@@ -216,14 +193,8 @@ async function initMap() {
     let request;
     if (currMarker[7] == "Broel") {
       request = {
-<<<<<<< HEAD
-      
         //50.83076640730554, 3.2669242837072394
         origin: { lat: 50.83076640730554, lng: 3.2669242837072394},
-=======
-        //50.83076640730554, 3.2669242837072394
-        origin: { lat: 50.83076640730554, lng: 3.2669242837072394 },
->>>>>>> 6051445 (bug fix map)
         destination: { lat: currMarker[1], lng: currMarker[2] },
         travelMode: google.maps.TravelMode.WALKING,
       
