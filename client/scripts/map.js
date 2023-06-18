@@ -110,7 +110,7 @@ async function initMap() {
       "Het park dankt zijn naam aan het bezoek dat koningin Astrid op 5 april 1935 aan Kortrijk bracht.",
     ],   
     [
-      "TEXTURE - Flax & River Lys Museum",
+      "Texture Museum",
       50.83051890394925, 
       3.2557554138642963,
       "../assets/svg/rivier.svg",
@@ -150,6 +150,7 @@ async function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
+      maxWidth: 250,
       content:
         "<div class='marked'>" +
         "<p>" +
