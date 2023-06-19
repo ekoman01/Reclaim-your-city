@@ -38,9 +38,10 @@ html {
 .scene_two {
   display: none;
   width: auto;
+  height: 100vh;
   grid-template-rows: 1fr 1fr;
   background-image: url("../assets/images/wall_back.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -49,10 +50,19 @@ html {
   height: 80vh;
 }
 
+.scene_two > p {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2em;
+  text-align: center;
+  z-index: -1;
+}
+
 .glow {
   justify-self: center;
   opacity: 60%;
-  margin: 10em 0 0 0;
+  margin: 8em 0 0 0;
   width: 500px;
   height: 500px;
   border-radius: 50%;

@@ -74,6 +74,14 @@ const init = async () => {
       );
     }
   }
+
+  // prevent enter key from submitting form
+  document.querySelector(".form").onkeypress = function (e) {
+    let key = e.charCode || e.keyCode || 0;
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }; 
 };
 
 const handleClickConnect = async () => {
