@@ -54,7 +54,7 @@ async function initMap() {
       "The Begijnhof in Kortrijk was founded in 1238 by Johanna of Constantinopel.",
     ],
     [
-      "Skatebowl Albertpark",
+      "Skatebowl <br> Albertpark",
       50.83409970760863,
       3.270293270215407,
       "../assets/svg/rivier.svg",
@@ -98,7 +98,7 @@ async function initMap() {
       "This bridge was built in 2015 by the architectbureau ZJA. The bridge crosses the Leie. It is used by inhabitants and visitors of Kortrijk to travel to the Buda island.",
     ],
     [
-      "Koningin Astridpark",
+      "Koningin <br> Astridpark",
       50.834324539045305,
       3.2583107413794417,
       "../assets/svg/rivier.svg",

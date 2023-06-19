@@ -5,7 +5,7 @@ const chapters = [
   },
   {
     name: "intro_left_when",
-    text: "The event starts right after everyone is done with their exams, this way they can rap up their school year in fashion. <br> <br> The official date is 20 june.",
+    text: "The event starts right after everyone is done with their exams, this way they can rap up their school year in fashion. <br> <br> The official date is 30 june.",
   },
   {
     name: "intro_left_who",
