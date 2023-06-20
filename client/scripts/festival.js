@@ -1,7 +1,7 @@
 const chapters = [
   {
     name: "intro_left_where",
-    text: "The Festival will highlight certain places in Kortrijk. The biggest place will be at the Broelkaai. Here a “golden wall” will be erected to show the data we collected over the past school year. The golden paths will also overflow with the golden vision of Kortrijk.",
+    text: "The festival will highlight certain places in Kortrijk. The main event will be at the Broelkaai. Here a “golden wall” will be erected to show the data we collected over the past school year. The golden paths will also overflow with the golden vision of Kortrijk.",
   },
   {
     name: "intro_left_when",
