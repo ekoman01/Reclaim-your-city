@@ -54,6 +54,13 @@ header > div > p {
   font-size: 4em;
 }
 
+.locked > p > a {
+  font-family: greycliff-cf, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: var(--gold);
+}
+
 .locked > p:last-of-type {
   font-family: greycliff-cf, sans-serif;
   font-style: normal;
