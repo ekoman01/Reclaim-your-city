@@ -12,6 +12,8 @@ const $connectButton = document.getElementById("connectButton");
 let currentScene = 1;
 let totalScenes = 3;
 let buttonPressed = false;
+let sceneThreeCounter;
+let sceneThreeTimeout;
 
 const questions = [
   "Wat is typische Kortrijkse cultuur?",
@@ -147,6 +149,12 @@ const connect = async (port) => {
               moveToScene(3);
             }
           }
+
+          if (currentScene === 3 && json.data[0] === 1 && !buttonPressed) {
+            buttonPressed = true;
+            moveToScene(1);
+          }
+
         } catch (error) {
           //console.log(error);
         }
@@ -219,6 +227,18 @@ const moveToScene = (sceneNumber) => {
   if (sceneNumber >= 1 && sceneNumber <= totalScenes) {
     currentScene = sceneNumber;
 
+    if (sceneNumber === 1) {
+      transition(".scene_three", ".scene_one");
+      currentScene = 1;
+
+      clearInterval(sceneThreeCounter);
+      clearTimeout(sceneThreeTimeout);
+
+      setTimeout(function () {
+        buttonPressed = false;
+      }, 2000);
+    }
+
     if (currentScene === 2) {
       question = questions[Math.floor(Math.random() * questions.length)];
       document.querySelector(".question").innerHTML = question;
@@ -231,23 +251,25 @@ const moveToScene = (sceneNumber) => {
     }
 
     if (currentScene === 3) {
-      buttonPressed = false;
-      
       transition(".scene_two", ".scene_three");
-      let counter = 20;
+      let counter = 60;
 
-      const sceneThreeCounter = setInterval(function() {
+      sceneThreeCounter = setInterval(function() {
         counter--;
         document.querySelector(".counter").innerHTML = counter;
       }, 1000);
 
       setTimeout(function() {
+        buttonPressed = false;
+      }, 2000);
+
+      sceneThreeTimeout = setTimeout(function() {
         clearInterval(sceneThreeCounter);
         document.querySelector(".scene_three").style.display = "none";
         gsap.to(".scene_one", { x: 0 });
         playArrowAnimation();
         currentScene = 1;
-      }, 20000);
+      }, 60000);
     }
 
     console.log('Moving to Scene', currentScene);
